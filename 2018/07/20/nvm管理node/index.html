@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="ibamboo">
 <meta property="og:description" content="卸载老版本的 node 和 nvm 如果是从 brew 安装的, 运行 brew uninstall node 删除~/目录下所有 node 和 node_modules 删除 /usr/local/lib 中的所有 node 和 node_modules 删除 /usr/local/lib 中的所有 node 和 node_modules 的文件夹 在 /usr/local/bin 中, 删除所">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-01T16:46:15.000Z">
+<meta property="og:updated_time" content="2018-08-13T13:52:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nvm使用 nvm 管理不同版本的 node 与 npm">
 <meta name="twitter:description" content="卸载老版本的 node 和 nvm 如果是从 brew 安装的, 运行 brew uninstall node 删除~/目录下所有 node 和 node_modules 删除 /usr/local/lib 中的所有 node 和 node_modules 删除 /usr/local/lib 中的所有 node 和 node_modules 的文件夹 在 /usr/local/bin 中, 删除所">
@@ -177,7 +177,7 @@
 <h5 id="卸载-NVM"><a href="#卸载-NVM" class="headerlink" title="卸载 NVM"></a>卸载 NVM</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rm -rf ~/.nvm</span><br><span class="line">rm -rf ~/.npm</span><br><span class="line">rm -rf ~/.bower</span><br></pre></td></tr></table></figure>
 <p>还需要删除下.bash_profile文件中的配置(用brew安装后还需要重新加上，但不太一样)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># vim .bash_profile</span><br><span class="line">export NVM_DIR=&quot;$HOME/.nvm&quot;</span><br><span class="line">[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; . &quot;$NVM_DIR/nvm.sh&quot; # This loads nvm</span><br></pre></td></tr></table></figure>
-<h3 id="安装nvm"><a href="#安装nvm" class="headerlink" title="安装nvm"></a>安装nvm</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash</span><br></pre></td></tr></table></figure>
+<h3 id="安装nvm"><a href="#安装nvm" class="headerlink" title="安装nvm"></a>安装nvm</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh|bash</span><br></pre></td></tr></table></figure>
 <p>在.bash_profile文件最后边添加，没有这个文件 就创建一个</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export NVM_DIR=&quot;$HOME/.nvm&quot;</span><br><span class="line">[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; . &quot;$NVM_DIR/nvm.sh&quot;</span><br></pre></td></tr></table></figure>
 <p>重新启动一下配置<br>输入nvm可以看到如下信息</p>
@@ -230,18 +230,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/07/20/js中的或运算与三目运算 /" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/07/26/hexo_yilia_gitalk搭建github_page博客/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          js中的或运算与三目运算
+          hexo + yilia +gitalk 搭建github.io博客
         
       </div>
     </a>
   
   
-    <a href="/2018/07/16/Promise/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Promise的简易实现（一）</div>
+    <a href="/2018/07/20/js中的或运算与三目运算 /" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">js中的或运算与三目运算</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -376,11 +376,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">React Native</a>
+                <a href="javascript:void(0)" class="js-tag color3">环境</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">环境</a>
+                <a href="javascript:void(0)" class="js-tag color3">RN</a>
               </li>
              
               <li class="article-tag-list-item">
