@@ -8,21 +8,21 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>ibamboo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="CodePush 命令行Note: This translated document is community contributed and maintained, it will not be kept updated or in sync with the original by the main contributors. Please send a pull request if you">
+  <meta name="description" content="原文地址  CodePush 命令行Note: This translated document is community contributed and maintained, it will not be kept updated or in sync with the original by the main contributors. Please send a pull request">
 <meta name="keywords" content="RN">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ibamboo">
 <meta property="og:url" content="http://yoursite.com/2018/08/19/codePush/index.html">
 <meta property="og:site_name" content="ibamboo">
-<meta property="og:description" content="CodePush 命令行Note: This translated document is community contributed and maintained, it will not be kept updated or in sync with the original by the main contributors. Please send a pull request if you">
+<meta property="og:description" content="原文地址  CodePush 命令行Note: This translated document is community contributed and maintained, it will not be kept updated or in sync with the original by the main contributors. Please send a pull request">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://cloud.githubusercontent.com/assets/116461/14505396/c97bdc78-016d-11e6-89da-3f3557f8b33d.png">
 <meta property="og:image" content="https://cloud.githubusercontent.com/assets/116461/12526883/7730991c-c127-11e5-9196-98e9ceec758f.png">
 <meta property="og:image" content="https://cloud.githubusercontent.com/assets/696206/11605068/14e440d0-9aab-11e5-8837-69ab09bfb66c.PNG">
-<meta property="og:updated_time" content="2018-08-19T12:12:40.000Z">
+<meta property="og:updated_time" content="2018-08-19T12:26:29.799Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ibamboo">
-<meta name="twitter:description" content="CodePush 命令行Note: This translated document is community contributed and maintained, it will not be kept updated or in sync with the original by the main contributors. Please send a pull request if you">
+<meta name="twitter:description" content="原文地址  CodePush 命令行Note: This translated document is community contributed and maintained, it will not be kept updated or in sync with the original by the main contributors. Please send a pull request">
 <meta name="twitter:image" content="https://cloud.githubusercontent.com/assets/116461/14505396/c97bdc78-016d-11e6-89da-3f3557f8b33d.png">
   
   
@@ -154,7 +154,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="CodePush-命令行"><a href="#CodePush-命令行" class="headerlink" title="CodePush 命令行"></a>CodePush 命令行</h1><h4 id="Note-This-translated-document-is-community-contributed-and-maintained-it-will-not-be-kept-updated-or-in-sync-with-the-original-by-the-main-contributors-Please-send-a-pull-request-if-you-find-any-issues"><a href="#Note-This-translated-document-is-community-contributed-and-maintained-it-will-not-be-kept-updated-or-in-sync-with-the-original-by-the-main-contributors-Please-send-a-pull-request-if-you-find-any-issues" class="headerlink" title="Note: This translated document is community contributed and maintained, it will not be kept updated or in sync with the original by the main contributors. Please send a pull request if you find any issues."></a>Note: This translated document is community contributed and maintained, it will not be kept updated or in sync with the <a href="./README.md">original</a> by the main contributors. Please send a pull request if you find any issues.</h4><h4 id="注：本翻译文档是由社区贡献和维护，不受原文的作者持续维护并更新。如果您发现任何问题，请发送pull请求。"><a href="#注：本翻译文档是由社区贡献和维护，不受原文的作者持续维护并更新。如果您发现任何问题，请发送pull请求。" class="headerlink" title="注：本翻译文档是由社区贡献和维护，不受原文的作者持续维护并更新。如果您发现任何问题，请发送pull请求。"></a>注：本翻译文档是由社区贡献和维护，不受<a href="./README.md">原文</a>的作者持续维护并更新。如果您发现任何问题，请发送pull请求。</h4><p>CodePush是一个云服务，它能让Cordova和React Native的开发者将手机应用的更新直接部署到用户的设备上。<br>它担任类似中间仓库的角色，开发者可以把更新（JS，HTML，CSS和图片）发布到这个仓库上，然后那些Apps就能查询到更新了（那些集成了CodePush SDKs的<a href="http://github.com/Microsoft/cordova-plugin-code-push" target="_blank" rel="noopener">Cordova</a>和<a href="http://github.com/Microsoft/react-native-code-push" target="_blank" rel="noopener">React Native</a> 应用）。</p>
+        <ul>
+<li><a href="https://github.com/Microsoft/code-push/blob/master/cli/README-cn.md" target="_blank" rel="noopener">原文地址</a></li>
+</ul>
+<h1 id="CodePush-命令行"><a href="#CodePush-命令行" class="headerlink" title="CodePush 命令行"></a>CodePush 命令行</h1><h4 id="Note-This-translated-document-is-community-contributed-and-maintained-it-will-not-be-kept-updated-or-in-sync-with-the-original-by-the-main-contributors-Please-send-a-pull-request-if-you-find-any-issues"><a href="#Note-This-translated-document-is-community-contributed-and-maintained-it-will-not-be-kept-updated-or-in-sync-with-the-original-by-the-main-contributors-Please-send-a-pull-request-if-you-find-any-issues" class="headerlink" title="Note: This translated document is community contributed and maintained, it will not be kept updated or in sync with the original by the main contributors. Please send a pull request if you find any issues."></a>Note: This translated document is community contributed and maintained, it will not be kept updated or in sync with the <a href="./README.md">original</a> by the main contributors. Please send a pull request if you find any issues.</h4><h4 id="注：本翻译文档是由社区贡献和维护，不受原文的作者持续维护并更新。如果您发现任何问题，请发送pull请求。"><a href="#注：本翻译文档是由社区贡献和维护，不受原文的作者持续维护并更新。如果您发现任何问题，请发送pull请求。" class="headerlink" title="注：本翻译文档是由社区贡献和维护，不受原文的作者持续维护并更新。如果您发现任何问题，请发送pull请求。"></a>注：本翻译文档是由社区贡献和维护，不受<a href="./README.md">原文</a>的作者持续维护并更新。如果您发现任何问题，请发送pull请求。</h4><p><---more---></---more---></p>
+<p>CodePush是一个云服务，它能让Cordova和React Native的开发者将手机应用的更新直接部署到用户的设备上。<br>它担任类似中间仓库的角色，开发者可以把更新（JS，HTML，CSS和图片）发布到这个仓库上，然后那些Apps就能查询到更新了（那些集成了CodePush SDKs的<a href="http://github.com/Microsoft/cordova-plugin-code-push" target="_blank" rel="noopener">Cordova</a>和<a href="http://github.com/Microsoft/react-native-code-push" target="_blank" rel="noopener">React Native</a> 应用）。</p>
 <p>这就让你可以与你的用户群有一个更确定且直接的交互模式，当你定位到Bug或添加小功能时，就不需要重新构建二进制文件再在各AppStore里重新发布了。</p>
 <p><img src="https://cloud.githubusercontent.com/assets/116461/14505396/c97bdc78-016d-11e6-89da-3f3557f8b33d.png" alt="CodePush CLI"></p>
 <ul>
