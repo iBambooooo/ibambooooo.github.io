@@ -6,18 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018 | ibamboo</title>
+  <title>RN-android报错 | ibamboo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="划船不用桨，一生全靠浪">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ibamboo">
-<meta property="og:url" content="http://yoursite.com/archives/2018/index.html">
+  <meta name="description" content="使用react-native run-android 运行出现  1`JAVA_HOME is set to an invalid directory`">
+<meta name="keywords" content="RN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RN-android报错">
+<meta property="og:url" content="http://yoursite.com/2018/08/20/RN-android报错/index.html">
 <meta property="og:site_name" content="ibamboo">
-<meta property="og:description" content="划船不用桨，一生全靠浪">
+<meta property="og:description" content="使用react-native run-android 运行出现  1`JAVA_HOME is set to an invalid directory`">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2018/08/20/RN-android报错/001.png">
+<meta property="og:image" content="http://yoursite.com/2018/08/20/RN-android报错/002.png">
+<meta property="og:image" content="http://yoursite.com/2018/08/20/RN-android报错/003.png">
+<meta property="og:image" content="http://yoursite.com/2018/08/20/RN-android报错/004.png">
+<meta property="og:updated_time" content="2018-08-20T03:20:44.756Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ibamboo">
-<meta name="twitter:description" content="划船不用桨，一生全靠浪">
+<meta name="twitter:title" content="RN-android报错">
+<meta name="twitter:description" content="使用react-native run-android 运行出现  1`JAVA_HOME is set to an invalid directory`">
+<meta name="twitter:image" content="http://yoursite.com/2018/08/20/RN-android报错/001.png">
   
   
     <link rel="icon" href="/assets/image/竹子2.png">
@@ -143,36 +150,45 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-RN-android报错" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      RN-android报错
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/20/RN-android报错/" class="archive-article-date">
+
+        
+        <a href="/2018/08/20/RN-android报错/" class="archive-article-date">
   	<time datetime="2018-08-20T03:11:56.223Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-20</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/20/RN-android报错/">RN-android报错</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><h3 id="使用react-native-run-android-运行出现"><a href="#使用react-native-run-android-运行出现" class="headerlink" title="使用react-native run-android 运行出现"></a>使用react-native run-android 运行出现</h3></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`JAVA_HOME is set to an invalid directory`</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>这个原因是<code>.bash_profile</code>中定义的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home</span><br><span class="line">export PATH=$JAVA_HOME/bin:$PATH</span><br><span class="line">export CLASS_PATH=$JAVA_HOME/lib:$CLASS_PATH</span><br></pre></td></tr></table></figure>
+<p>文件目录不正确，解决办法，使用android studio运行项目，查看jdk路径<br><img src="/2018/08/20/RN-android报错/001.png" alt=""><br><img src="/2018/08/20/RN-android报错/002.png" alt=""></p>
+<ul>
+<li><h3 id="android-运行起来，报错could-not-connect-to-development-server"><a href="#android-运行起来，报错could-not-connect-to-development-server" class="headerlink" title="android 运行起来，报错could not connect to development server"></a>android 运行起来，报错<code>could not connect to development server</code></h3>需要摇一摇在设置<code>debug server host &amp;port for device</code><br><img src="/2018/08/20/RN-android报错/003.png" alt=""><br><img src="/2018/08/20/RN-android报错/004.png" alt=""></li>
+</ul>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -184,363 +200,72 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/19/RN打包ios报错/" class="archive-article-date">
-  	<time datetime="2018-08-19T12:32:36.219Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-19</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/08/19/RN打包ios报错/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">RN打包iOS报错</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/19/RN打包ios报错/">RN打包iOS报错</a>
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">RN</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
+  
+    <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script type="text/javascript">
+if(true){
+	var gitalk = new Gitalk({
+  	clientID: 'b9959dc62407851b3b35',
+  	clientSecret: 'd3e63aac9bfeb83073480217f69fe062d20da424',
+  	repo: 'ibambooooo.github.io',
+  	owner: 'ibambooooo',
+  	admin: ['ibambooooo'],
+  	 id: 'Mon Aug 20 2018 11:11:56 GMT+0800', //页面的唯一标识。长度必须小于50
+    //id: window.location.pathname,
+     //类似Facebook评论框的全屏遮罩效果.
+  	distractionFreeMode: false
+})
+gitalk.render('gitalk-container') 
+}
+</script>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/19/mac 系统过大/" class="archive-article-date">
-  	<time datetime="2018-08-19T12:12:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/19/mac 系统过大/">mac系统过大</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">mac</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/19/codePush/" class="archive-article-date">
-  	<time datetime="2018-08-19T12:12:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/19/codePush/">CodePush 命令行</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">RN</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/13/nvm管理node/" class="archive-article-date">
-  	<time datetime="2018-08-13T13:52:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/13/nvm管理node/">nvm使用 nvm 管理不同版本的 node 与 npm</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">环境</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/02/Promise/" class="archive-article-date">
-  	<time datetime="2018-08-02T12:56:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/02/Promise/">Promise的简易实现（一）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">RN</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/02/reactjs错误处理/" class="archive-article-date">
-  	<time datetime="2018-08-01T17:03:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/02/reactjs错误处理/">reactjs错误处理</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">环境</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/02/hexo_yilia_gitalk搭建github_page博客/" class="archive-article-date">
-  	<time datetime="2018-08-01T16:50:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/02/hexo_yilia_gitalk搭建github_page博客/">hexo + yilia +gitalk 搭建github.io博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">环境</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/02/js中的或运算与三目运算 /" class="archive-article-date">
-  	<time datetime="2018-08-01T16:46:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/02/js中的或运算与三目运算 /">js中的或运算与三目运算</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/02/RN相关环境配置/" class="archive-article-date">
-  	<time datetime="2018-08-01T16:41:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/02/RN相关环境配置/">RN相关环境配置</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">环境</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
-  
-
-    
-
-
           </div>
         </div>
       </div>
@@ -563,8 +288,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
