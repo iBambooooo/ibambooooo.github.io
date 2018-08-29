@@ -332,27 +332,9 @@
 <li>正常模式 <code>ESC</code>或者<code>Ctrl + [</code> 左下角文件名为空</li>
 <li>插入模式 <code>i</code> 左下角显示 – INSERT–</li>
 </ul>
-<h3 id="退出命令"><a href="#退出命令" class="headerlink" title="退出命令"></a>退出命令</h3><p>:wq 保存并退出<br>ZZ 保存并退出<br>:q! 强制退出并忽略所有更改<br>:e! 放弃所有修改，并打开原来文件。</p>
-<h3 id="复制粘贴"><a href="#复制粘贴" class="headerlink" title="复制粘贴"></a>复制粘贴</h3><ul>
-<li><code>U</code> 在撤销（需要在正常模式）</li>
-<li><code>ctrl + r</code> 重做（逆返回撤销）</li>
-<li><code>yy</code>拷贝当前行</li>
-<li><code>shift+p</code>在当前行前粘贴</li>
-<li>正常模式下按v（逐字）或V（逐行）进入可视模式，然后用jklh命令移动即可选择某些行或字符，再按d即可剪切</li>
-</ul>
-<ul>
-<li><code>vim file1 file2 file3 ...</code> 同时打开多个文件</li>
-<li><code>:open file</code>在vim窗口打开一个新文件</li>
-<li><code>:split file</code> 在新窗口中打开文件</li>
-<li><code>:bn</code>切换到下一个文件</li>
-<li><code>:bp</code>切换到上一个文件</li>
-<li><code>:args</code> 查看当前打开的文件列表，当前正在编辑的文件会用[]括起来</li>
-<li><code>:e ftp://192.168.10.76/abc.txt</code> 打开远程ftp的文件</li>
-<li><code>:e \\qadrive\test\1.txt</code> 打开共享服务器的文件</li>
-<li><code>^</code>移动光标到行首</li>
-<li><code>$</code>移动光标到行尾</li>
-</ul>
-
+        
+          <a class="article-more-a" href="/2018/08/01/Vim常用命令/#more">More >></a>
+        
       
 
       
@@ -428,31 +410,9 @@
         <h3 id="ssh"><a href="#ssh" class="headerlink" title="ssh"></a>ssh</h3><p>SSH是一种网络协议，用于计算机之间的加密登录</p>
 <h3 id="登录服务器"><a href="#登录服务器" class="headerlink" title="登录服务器"></a>登录服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh root@ip地址</span><br></pre></td></tr></table></figure>
 <p>回车 输入密码</p>
-<h3 id="从服务器上传下载"><a href="#从服务器上传下载" class="headerlink" title="从服务器上传下载"></a>从服务器上传下载</h3><ul>
-<li>从服务器下载文件</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp username@servername:/path/filename  /Users/mac/Desktop</span><br></pre></td></tr></table></figure>
-<p> <code>scp root@172.16.1.93:/root/test.txt /Users/mac/Desktop</code><br> 就是将服务器上的/root/test.txt下载到本地的/Users/mac/Desktop目录下。两个地址之间有空格！</p>
-<ul>
-<li>上传文件到服务器</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp /Users/mac/Desktop/test.txt root@123.207.170.40:/root/</span><br></pre></td></tr></table></figure>
-<p> <code>/Users/mac/Desktop/test.txt</code> 本地文件地址，<a href="mailto:`root@123.207.170.40" target="_blank" rel="noopener">`root@123.207.170.40</a>:/root/`服务器地址</p>
-<ul>
-<li>从服务器下载整个目录</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp -r root@192.168.0.101:/root/ /Users/mac/Desktop/</span><br></pre></td></tr></table></figure>
-<p>  <code>scp -r root@192.168.0.101:/root/</code> 远程目录， <code>/Users/mac/Desktop/</code>本地目录</p>
-<ul>
-<li><p>上传目录到服务器</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp -r test root@192.168.0.101:/root/</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="文件压缩"><a href="#文件压缩" class="headerlink" title="文件压缩"></a>文件压缩</h3><ul>
-<li>压缩某个文件<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gzip -c dragonmail.plist &gt; dragonmail.plist.gz</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-
+        
+          <a class="article-more-a" href="/2018/08/01/Linux常用操作/#more">More >></a>
+        
       
 
       
