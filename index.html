@@ -148,14 +148,24 @@
     <article id="post-bash_profile文件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/30/bash_profile文件/">bash_profile文件定义</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/30/bash_profile文件/" class="archive-article-date">
+  	<time datetime="2018-08-30T11:08:40.122Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-30</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<p>title: bash_profile文件定义<br>date: 1535627320122<br>tag:</p>
-<ul>
-<li>mac</li>
-</ul>
-<hr>
+        <p>返回</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line">source ~/.profile</span><br><span class="line"> </span><br><span class="line">alias ls=&apos;ls -G&apos;</span><br><span class="line">alias ll=&apos;ls -l&apos;</span><br><span class="line">alias grep=&apos;grep --color&apos;</span><br><span class="line">alias trashCoap=&apos;react-native run-android&apos;</span><br><span class="line">alias start-rn=&apos;react-native run-android&apos;</span><br><span class="line"></span><br><span class="line"># rn debug 运行的简写</span><br><span class="line"></span><br><span class="line">#alias run-android=&apos;react-native run-android --variant </span><br><span class="line">generaldebug&apos;</span><br><span class="line"></span><br><span class="line">alias  randroid=&apos;react-native run-android&apos;</span><br><span class="line">alias  rios=&apos;react-native run-ios&apos;</span><br><span class="line">alias  rstart=&apos;react-native start&apos;</span><br><span class="line"></span><br><span class="line">alias build-ge=&apos;./gradlew assembleGeneralRelease&apos;</span><br><span class="line">alias install-ge=&apos;./gradlew assembleGeneralRelease &amp;&amp; ./gradlew installRelease&apos;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#gradle</span><br><span class="line">GRADLE_HOME=/Applications/Android\Studio.app/Contents/gradle/gradle-4.4</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">export GRADLE_HOME</span><br><span class="line"></span><br><span class="line">export PATH=$PATH:$GRADLE_HOME/bin</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node</span><br><span class="line"></span><br><span class="line">#node</span><br><span class="line">export PATH=/Users/30san/.nvm/versions/node/v6.14.3/lib/node_modules/npm/bin:$PATH</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">export PATH=&quot;/usr/local/opt/openssl/bin:$PATH&quot;</span><br><span class="line">export PATH=&quot;$HOME/.rbenv/bin:$PATH&quot;</span><br><span class="line">if which rbenv &gt; /dev/null; then eval &quot;$(rbenv init -)&quot;; fi</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home</span><br><span class="line">#PATH=$JAVA_HOME/bin:$PATH:.</span><br><span class="line">#CLASSPATH=$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:.</span><br><span class="line"></span><br><span class="line">#JAVA</span><br><span class="line"></span><br><span class="line">export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home</span><br><span class="line">export PATH=$JAVA_HOME/bin:$PATH</span><br><span class="line">export CLASS_PATH=$JAVA_HOME/lib:$CLASS_PATH</span><br><span class="line"></span><br><span class="line">#android </span><br><span class="line">export ANDROID_HOME=/opt/android-sdk-macosx</span><br><span class="line">export PATH=$&#123;PATH&#125;:$&#123;ANDROID_HOME&#125;/tools</span><br><span class="line">export PATH=$&#123;PATH&#125;:$&#123;ANDROID_HOME&#125;/platform-tools</span><br><span class="line"></span><br><span class="line">#export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools/23.0.2:$PATH</span><br><span class="line"></span><br><span class="line">export NVM_DIR=&quot;$HOME/.nvm&quot;</span><br><span class="line">[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; . &quot;$NVM_DIR/nvm.sh&quot;</span><br><span class="line">./node_modules/react-native/packager/react-native-xcode.sh</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#tree</span><br><span class="line">#alias tree=&quot;find . -print | sed -e &apos;s;[^/]*/;|____;g;s;____|; |;g&apos;&quot;</span><br><span class="line"></span><br><span class="line">#[ -s &quot;$NVM_DIR/bash_completion&quot; ] &amp;&amp; \. &quot;$NVM_DIR/bash_completion&quot;  # This loads nvm #bash_completion</span><br><span class="line">alias tree=&quot;find . -print | sed -e &apos;s;[^/]*/;|____;g;s;____|; |;g&apos;&quot;</span><br></pre></td></tr></table></figure>
 
       
@@ -165,6 +175,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">mac</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
