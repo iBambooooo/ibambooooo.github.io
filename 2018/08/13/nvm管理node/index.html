@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="ibamboo">
 <meta property="og:description" content="卸载老版本的 node 和 nvm 如果是从 brew 安装的, 运行 brew uninstall node 删除~/目录下所有 node 和 node_modules 删除 /usr/local/lib 中的所有 node 和 node_modules 删除 /usr/local/lib 中的所有 node 和 node_modules 的文件夹 在 /usr/local/bin 中, 删除所">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-13T13:52:33.000Z">
+<meta property="og:updated_time" content="2018-08-30T08:35:04.850Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nvm使用 nvm 管理不同版本的 node 与 npm">
 <meta name="twitter:description" content="卸载老版本的 node 和 nvm 如果是从 brew 安装的, 运行 brew uninstall node 删除~/目录下所有 node 和 node_modules 删除 /usr/local/lib 中的所有 node 和 node_modules 删除 /usr/local/lib 中的所有 node 和 node_modules 的文件夹 在 /usr/local/bin 中, 删除所">
@@ -198,6 +198,8 @@
 <h3 id="RN项目跑起来-出现No-bundle-URL-present-需要开启npm"><a href="#RN项目跑起来-出现No-bundle-URL-present-需要开启npm" class="headerlink" title="RN项目跑起来,出现No bundle URL present 需要开启npm"></a>RN项目跑起来,出现No bundle URL present 需要开启npm</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">react-native link</span><br><span class="line">npm run start</span><br></pre></td></tr></table></figure>
 <h3 id="nvm默认启动一种环境"><a href="#nvm默认启动一种环境" class="headerlink" title="nvm默认启动一种环境"></a>nvm默认启动一种环境</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm alias default 6.9.4</span><br></pre></td></tr></table></figure>
 <h3 id="创建react应用"><a href="#创建react应用" class="headerlink" title="创建react应用"></a>创建react应用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npx create-react-app my-app</span><br><span class="line">cd my-app</span><br><span class="line">npm start</span><br></pre></td></tr></table></figure>
+<h3 id="nvm卸载指定node-js版本号"><a href="#nvm卸载指定node-js版本号" class="headerlink" title="nvm卸载指定node.js版本号"></a>nvm卸载指定node.js版本号</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm卸载指定node.js版本号</span><br></pre></td></tr></table></figure>
+<p>报这个错,说明权限不够，需要在命令前添加sudo<br>__<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">file is not writable: $NVM_DIR/versions/node/v6.9.2/bin/gulp</span><br><span class="line">Cannot uninstall, incorrect permissions on installation folder.</span><br><span class="line">This is usually caused by running `npm install -g` as root. Run the following commands as root to fix the permissions and then try again.</span><br><span class="line"></span><br><span class="line"> chown -R xgllseo &quot;$NVM_DIR/versions/node/v6.9.2&quot;</span><br><span class="line"> chmod -R u+w &quot;$NVM_DIR/versions/node/v6.9.2&quot;</span><br></pre></td></tr></table></figure></p>
 
       
 
