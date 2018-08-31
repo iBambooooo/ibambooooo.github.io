@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Vim常用 | ibamboo</title>
+  <title>cocopod | ibamboo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="启动 vim 直接启动vim vim filename打开vim并创建名为filename的文件  vim的模式 正常模式 ESC或者Ctrl + [ 左下角文件名为空 插入模式 i 左下角显示 – INSERT–">
-<meta name="keywords" content="mac">
+  <meta name="description" content="查看源(如果不是https://gems.ruby-china.org源，移除现有源)">
+<meta name="keywords" content="ios">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vim常用">
-<meta property="og:url" content="http://yoursite.com/2018/08/01/Vim常用命令/index.html">
+<meta property="og:title" content="cocopod">
+<meta property="og:url" content="http://yoursite.com/2018/08/31/cocopod/index.html">
 <meta property="og:site_name" content="ibamboo">
-<meta property="og:description" content="启动 vim 直接启动vim vim filename打开vim并创建名为filename的文件  vim的模式 正常模式 ESC或者Ctrl + [ 左下角文件名为空 插入模式 i 左下角显示 – INSERT–">
+<meta property="og:description" content="查看源(如果不是https://gems.ruby-china.org源，移除现有源)">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-29T05:27:00.634Z">
+<meta property="og:updated_time" content="2018-08-31T07:59:29.602Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vim常用">
-<meta name="twitter:description" content="启动 vim 直接启动vim vim filename打开vim并创建名为filename的文件  vim的模式 正常模式 ESC或者Ctrl + [ 左下角文件名为空 插入模式 i 左下角显示 – INSERT–">
+<meta name="twitter:title" content="cocopod">
+<meta name="twitter:description" content="查看源(如果不是https://gems.ruby-china.org源，移除现有源)">
   
   
     <link rel="icon" href="/assets/image/竹子2.png">
@@ -145,56 +145,73 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Vim常用命令" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-cocopod" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Vim常用
+      cocopod
     </h1>
   
 
         
-        <a href="/2018/08/01/Vim常用命令/" class="archive-article-date">
-  	<time datetime="2018-08-01T10:43:06.449Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-01</time>
+        <a href="/2018/08/31/cocopod/" class="archive-article-date">
+  	<time datetime="2018-08-31T07:43:01.737Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-31</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><ul>
-<li><code>vim</code> 直接启动vim</li>
-<li><code>vim filename</code>打开vim并创建名为filename的文件</li>
+        <ul>
+<li>查看源(如果不是<a href="https://gems.ruby-china.org源，移除现有源" target="_blank" rel="noopener">https://gems.ruby-china.org源，移除现有源</a>)<a id="more"></a>
+</li>
 </ul>
-<h3 id="vim的模式"><a href="#vim的模式" class="headerlink" title="vim的模式"></a>vim的模式</h3><ul>
-<li>正常模式 <code>ESC</code>或者<code>Ctrl + [</code> 左下角文件名为空</li>
-<li>插入模式 <code>i</code> 左下角显示 – INSERT–</li>
-</ul>
-<a id="more"></a>
-<h3 id="退出命令"><a href="#退出命令" class="headerlink" title="退出命令"></a>退出命令</h3><p>:wq 保存并退出<br>ZZ 保存并退出<br>:q! 强制退出并忽略所有更改<br>:e! 放弃所有修改，并打开原来文件。</p>
-<h3 id="复制粘贴"><a href="#复制粘贴" class="headerlink" title="复制粘贴"></a>复制粘贴</h3><ul>
-<li><code>U</code> 在撤销（需要在正常模式）</li>
-<li><code>ctrl + r</code> 重做（逆返回撤销）</li>
-<li><code>yy</code>拷贝当前行</li>
-<li><code>shift+p</code>在当前行前粘贴</li>
-<li>正常模式下按v（逐字）或V（逐行）进入可视模式，然后用jklh命令移动即可选择某些行或字符，再按d即可剪切</li>
-</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem sources -l</span><br></pre></td></tr></table></figure>
 <ul>
-<li><code>vim file1 file2 file3 ...</code> 同时打开多个文件</li>
-<li><code>:open file</code>在vim窗口打开一个新文件</li>
-<li><code>:split file</code> 在新窗口中打开文件</li>
-<li><code>:bn</code>切换到下一个文件</li>
-<li><code>:bp</code>切换到上一个文件</li>
-<li><code>:args</code> 查看当前打开的文件列表，当前正在编辑的文件会用[]括起来</li>
-<li><code>:e ftp://192.168.10.76/abc.txt</code> 打开远程ftp的文件</li>
-<li><code>:e \\qadrive\test\1.txt</code> 打开共享服务器的文件</li>
-<li><code>^</code>移动光标到行首</li>
-<li><code>$</code>移动光标到行尾</li>
+<li>移除现有源</li>
 </ul>
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gem sources --remove http://ruby.taobao.org/（http://ruby.taobao.org/</span><br><span class="line">指的是源）</span><br></pre></td></tr></table></figure>
+<ul>
+<li>添加新源</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem sources -a https://gems.ruby-china.org</span><br></pre></td></tr></table></figure>
+<ul>
+<li>查看新镜像是否添加成功</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem sources -l</span><br></pre></td></tr></table></figure>
+<ul>
+<li>安装CocoaPods</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem install cocoapods</span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li>注意：苹果系统升级 OS X EL Capitan 后改为  sudo gem install -n /usr/local/bin cocoapods</li>
+</ul>
+<hr>
+<ul>
+<li>设置pod ,这里可能需要等几秒钟</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod setup</span><br></pre></td></tr></table></figure>
+<ul>
+<li>更新gem</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem update --system</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>在项目中添加cocopod管理<br>在项目根目录创建Podfile文件</p>
+<hr>
+<h2 id="文件直接叫Podfile-没有后缀"><a href="#文件直接叫Podfile-没有后缀" class="headerlink" title="文件直接叫Podfile 没有后缀"></a>文件直接叫Podfile 没有后缀</h2><ul>
+<li>编辑 <code>Podfile</code> 添加需要的库,然后cd到项目根目录</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod install</span><br></pre></td></tr></table></figure>
+<ul>
+<li>更新库</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod update</span><br></pre></td></tr></table></figure>
       
 
       
@@ -207,7 +224,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">mac</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ios</a>
         		</li>
       		
 		</ul>
@@ -226,18 +243,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/08/02/RN相关环境配置/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          RN相关环境配置
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/08/01/Linux常用操作/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">ssh连接服务器常用操作</div>
+    <a href="/2018/08/31/RN_android 相关/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">android</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -277,7 +285,7 @@ if(true){
   	repo: 'ibambooooo.github.io',
   	owner: 'ibambooooo',
   	admin: ['ibambooooo'],
-  	 id: 'Wed Aug 01 2018 18:43:06 GMT+0800', //页面的唯一标识。长度必须小于50
+  	 id: 'Fri Aug 31 2018 15:43:01 GMT+0800', //页面的唯一标识。长度必须小于50
     //id: window.location.pathname,
      //类似Facebook评论框的全屏遮罩效果.
   	distractionFreeMode: false
