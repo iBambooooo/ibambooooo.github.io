@@ -145,6 +145,245 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-mac相关操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/29/mac相关操作/">mac 相关操作</a>
+    </h1>
+  
+
+        
+        <a href="/2018/10/29/mac相关操作/" class="archive-article-date">
+  	<time datetime="2018-10-29T08:21:26.621Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="安装任何来源的文件"><a href="#安装任何来源的文件" class="headerlink" title="安装任何来源的文件"></a>安装任何来源的文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo spctl --master-disable</span><br></pre></td></tr></table></figure>
+<h2 id="dock-隐藏模式下弹出的时间调整-弹出前延时速度"><a href="#dock-隐藏模式下弹出的时间调整-弹出前延时速度" class="headerlink" title="dock 隐藏模式下弹出的时间调整  弹出前延时速度"></a>dock 隐藏模式下弹出的时间调整  弹出前延时速度</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">defaults write com.apple.Dock autohide-delay -int 0 &amp;&amp; killall Dock</span><br></pre></td></tr></table></figure>
+<ul>
+<li>弹出及隐藏的过程的动画的速度<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">defaults write com.apple.dock autohide-time-modifier -int 0; killall Dock</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>以上命令将时间设置为0，将无动画效果，瞬间显示Dock栏。</p>
+<ul>
+<li>若使用动画过渡时间（这里0.3s）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">defaults write com.apple.dock autohide-time-modifier -float 0.3;killall Dock</span><br></pre></td></tr></table></figure>
+<p>总结一下就是当要设置为0值时，需要用int，用小数时需要用<code>float</code>。<br><code>autohide-delay</code>和<code>autohide-time-modifier</code>分别控制弹出前的延时和弹出动画的时间。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">mac</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/29/mac相关操作/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
+    <article id="post-Flastlist数据更新UI更新的问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/24/Flastlist数据更新UI更新的问题/">FlatList数据源更新问题</a>
+    </h1>
+  
+
+        
+        <a href="/2018/10/24/Flastlist数据更新UI更新的问题/" class="archive-article-date">
+  	<time datetime="2018-10-24T03:06:18.670Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>PureComponent 浅对比</li>
+</ul>
+<p>如果FlatList组件继承自PureComponent，当数据源更新的时候，flatlist UI不会刷新</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">list = [];</span><br><span class="line">list = list.concat(data);</span><br><span class="line">list.push(newdata);  blacklists.push(newData);</span><br><span class="line">this.setState(&#123;</span><br><span class="line">    listViewData:list,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">RN</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/24/Flastlist数据更新UI更新的问题/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
+    <article id="post-realm" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/19/realm/">realm</a>
+    </h1>
+  
+
+        
+        <a href="/2018/09/19/realm/" class="archive-article-date">
+  	<time datetime="2018-09-19T07:25:14.570Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="安装realm报错"><a href="#安装realm报错" class="headerlink" title="安装realm报错"></a>安装realm报错</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">make: *** [Release/obj.target/realm/src/node/node_init.o] Error 1</span><br><span class="line">gyp ERR! build error</span><br><span class="line">gyp ERR! stack Error: `make` failed with exit code: 2</span><br><span class="line">gyp ERR! stack     at ChildProcess.onExit (/Users/30san/.nvm/versions/node/v10.9.0/lib/node_modules/npm/node_modules/node-gyp/lib/build.js:262:23)</span><br><span class="line">gyp ERR! stack     at ChildProcess.emit (events.js:182:13)</span><br><span class="line">gyp ERR! stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:239:12)</span><br><span class="line">gyp ERR! System Darwin 17.7.0</span><br><span class="line">gyp ERR! command &quot;/Users/30san/.nvm/versions/node/v10.9.0/bin/node&quot; &quot;/Users/30san/.nvm/versions/node/v10.9.0/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js&quot; &quot;build&quot; &quot;--fallback-to-build&quot; &quot;--module=/Users/30san/Desktop/DragonMail/node_modules/realm/compiled/node-v64_darwin_x64/realm.node&quot; &quot;--module_name=realm&quot; &quot;--module_path=/Users/30san/Desktop/DragonMail/node_modules/realm/compiled/node-v64_darwin_x64&quot; &quot;--napi_version=3&quot; &quot;--node_abi_napi=napi&quot; &quot;--napi_build_version=0&quot; &quot;--node_napi_label=node-v64&quot;</span><br><span class="line">gyp ERR! cwd /Users/30san/Desktop/DragonMail/node_modules/realm</span><br><span class="line">gyp ERR! node -v v10.9.0</span><br><span class="line">gyp ERR! node-gyp -v v3.8.0</span><br><span class="line">gyp ERR! not ok</span><br><span class="line">node-pre-gyp ERR! build error</span><br><span class="line">node-pre-gyp ERR! stack Error: Failed to execute &apos;/Users/30san/.nvm/versions/node/v10.9.0/bin/node /Users/30san/.nvm/versions/node/v10.9.0/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js build --fallback-to-build --module=/Users/30san/Desktop/DragonMail/node_modules/realm/compiled/node-v64_darwin_x64/realm.node --module_name=realm --module_path=/Users/30san/Desktop/DragonMail/node_modules/realm/compiled/node-v64_darwin_x64 --napi_version=3 --node_abi_napi=napi --napi_build_version=0 --node_napi_label=node-v64&apos; (1)</span><br><span class="line">node-pre-gyp ERR! stack     at ChildProcess.&lt;anonymous&gt; (/Users/30san/Desktop/DragonMail/node_modules/node-pre-gyp/lib/util/compile.js:83:29)</span><br><span class="line">node-pre-gyp ERR! stack     at ChildProcess.emit (events.js:182:13)</span><br><span class="line">node-pre-gyp ERR! stack     at maybeClose (internal/child_process.js:961:16)</span><br><span class="line">node-pre-gyp ERR! stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:250:5)</span><br><span class="line">node-pre-gyp ERR! System Darwin 17.7.0</span><br><span class="line">node-pre-gyp ERR! command &quot;/Users/30san/.nvm/versions/node/v10.9.0/bin/node&quot; &quot;/Users/30san/Desktop/DragonMail/node_modules/.bin/node-pre-gyp&quot; &quot;install&quot; &quot;--fallback-to-build&quot;</span><br><span class="line">node-pre-gyp ERR! cwd /Users/30san/Desktop/DragonMail/node_modules/realm</span><br><span class="line">node-pre-gyp ERR! node -v v10.9.0</span><br><span class="line">node-pre-gyp ERR! node-pre-gyp -v v0.11.0</span><br><span class="line">node-pre-gyp ERR! not ok</span><br><span class="line">Failed to execute &apos;/Users/30san/.nvm/versions/node/v10.9.0/bin/node /Users/30san/.nvm/versions/node/v10.9.0/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js build--fallback-to-build --module=/Users/30san/Desktop/DragonMail/node_modules/realm/compiled/node-v64_darwin_x64/realm.node --module_name=realm --module_path=/Users/30san/Desktop/DragonMail/node_modules/realm/compiled/node-v64_darwin_x64 --napi_version=3 --node_abi_napi=napi --napi_build_version=0 --node_napi_label=node-v64&apos; (1)</span><br><span class="line">npm ERR! code ELIFECYCLE</span><br><span class="line">npm ERR! errno 1</span><br><span class="line">npm ERR! realm@2.15.3 install: `node-pre-gyp install --fallback-to-build`</span><br><span class="line">npm ERR! Exit status 1</span><br><span class="line">npm ERR!</span><br><span class="line">npm ERR! Failed at the realm@2.15.3 install script.</span><br><span class="line">npm ERR! This is probably not a problem with npm. There is likely additional logging output above.</span><br><span class="line"></span><br><span class="line">npm ERR! A complete log of this run can be found in:</span><br><span class="line">npm ERR!     /Users/30san/.npm/_logs/2018-09-19T07_20_05_725Z-debug.log</span><br></pre></td></tr></table></figure>
+<ul>
+<li>安装<br>realm 安装对node版本有限制</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Node: 4.0 &lt;= version &lt; 7.0</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">RN</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/19/realm/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
     <article id="post-nativebase框架" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -664,238 +903,6 @@
 
   
   
-    <article id="post-RN_android 相关" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/31/RN_android 相关/">android</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/31/RN_android 相关/" class="archive-article-date">
-  	<time datetime="2018-08-31T05:53:04.836Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="android模拟器"><a href="#android模拟器" class="headerlink" title="android模拟器"></a>android模拟器</h2><ul>
-<li>android 设备连接不上</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">adb kill-server</span><br><span class="line">adb start-server</span><br><span class="line">adb devices</span><br></pre></td></tr></table></figure>
-<p>出现</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List of devices attached</span><br><span class="line">emulator-5554	device (这里是device说明设备正常)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>网易mumu 获取root权限</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">RN</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/31/RN_android 相关/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
-    <article id="post-bash_profile文件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/30/bash_profile文件/">bash_profile文件定义</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/30/bash_profile文件/" class="archive-article-date">
-  	<time datetime="2018-08-30T11:08:40.122Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">source ~/.profile</span><br><span class="line"> </span><br><span class="line">alias ls=&apos;ls -G&apos;</span><br><span class="line">alias ll=&apos;ls -l&apos;</span><br><span class="line">alias grep=&apos;grep --color&apos;</span><br><span class="line">alias trashCoap=&apos;react-native run-android&apos;</span><br><span class="line">alias start-rn=&apos;react-native run-android&apos;</span><br><span class="line"></span><br><span class="line"># rn debug</span><br><span class="line">#alias run-android=&apos;react-native run-android --variant generaldebug&apos;</span><br><span class="line">alias  randroid=&apos;react-native run-android&apos;</span><br><span class="line">alias  rios=&apos;react-native run-ios&apos;</span><br><span class="line">alias  rstart=&apos;react-native start&apos;</span><br><span class="line">alias  rlink=&apos;react-native link&apos;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">alias build-ge=&apos;./gradlew assembleGeneralRelease&apos;</span><br><span class="line">alias install-ge=&apos;./gradlew assembleGeneralRelease &amp;&amp; ./gradlew installRelease&apos;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#gradle</span><br><span class="line">GRADLE_HOME=/Applications/Android\Studio.app/Contents/gradle/gradle-4.4</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">export GRADLE_HOME</span><br><span class="line"></span><br><span class="line">export PATH=$PATH:$GRADLE_HOME/bin</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node</span><br><span class="line"></span><br><span class="line">#node</span><br><span class="line">export PATH=/Users/30san/.nvm/versions/node/v6.14.3/lib/node_modules/npm/bin:$PATH</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">export PATH=&quot;/usr/local/opt/openssl/bin:$PATH&quot;</span><br><span class="line">export PATH=&quot;$HOME/.rbenv/bin:$PATH&quot;</span><br><span class="line">if which rbenv &gt; /dev/null; then eval &quot;$(rbenv init -)&quot;; fi</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home</span><br><span class="line">#PATH=$JAVA_HOME/bin:$PATH:.</span><br><span class="line">#CLASSPATH=$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:.</span><br><span class="line"></span><br><span class="line">#JAVA</span><br><span class="line"></span><br><span class="line">export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home</span><br><span class="line">export PATH=$JAVA_HOME/bin:$PATH</span><br><span class="line">export CLASS_PATH=$JAVA_HOME/lib:$CLASS_PATH</span><br><span class="line"></span><br><span class="line">#android </span><br><span class="line">export ANDROID_HOME=/opt/android-sdk-macosx</span><br><span class="line">export PATH=$&#123;PATH&#125;:$&#123;ANDROID_HOME&#125;/tools</span><br><span class="line">export PATH=$&#123;PATH&#125;:$&#123;ANDROID_HOME&#125;/platform-tools</span><br><span class="line"></span><br><span class="line">#export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools/23.0.2:$PATH</span><br><span class="line"></span><br><span class="line">export NVM_DIR=&quot;$HOME/.nvm&quot;</span><br><span class="line">[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; . &quot;$NVM_DIR/nvm.sh&quot;</span><br><span class="line">./node_modules/react-native/packager/react-native-xcode.sh</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#tree</span><br><span class="line">#alias tree=&quot;find . -print | sed -e &apos;s;[^/]*/;|____;g;s;____|; |;g&apos;&quot;</span><br><span class="line"></span><br><span class="line">#[ -s &quot;$NVM_DIR/bash_completion&quot; ] &amp;&amp; \. &quot;$NVM_DIR/bash_completion&quot;  # This loads nvm #bash_completion</span><br><span class="line">alias tree=&quot;find . -print | sed -e &apos;s;[^/]*/;|____;g;s;____|; |;g&apos;&quot;</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">mac</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/30/bash_profile文件/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
-    <article id="post-iTerm2 使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/30/iTerm2 使用/">iTerm2使用</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/30/iTerm2 使用/" class="archive-article-date">
-  	<time datetime="2018-08-30T10:47:31.494Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="光标控制"><a href="#光标控制" class="headerlink" title="光标控制"></a>光标控制</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">ctrl + a: 到行首</span><br><span class="line">ctrl + e: 行末</span><br><span class="line">ctrl + f/b: 前进后退，相当于左右方向键，但是显然比移开手按方向键更快</span><br><span class="line">ctrl + p: 上一条命令，相当于方向键上</span><br><span class="line">ctrl + r: 搜索命令历史，这个大家都应该很熟悉了</span><br><span class="line">ctrl + d: 删除当前字符</span><br><span class="line">ctrl + h: 删除之前的字符</span><br><span class="line">ctrl + w: 删除光标前的单词</span><br><span class="line">ctrl + k: 删除到文本末尾</span><br><span class="line">ctrl + t: 交换光标处文本</span><br><span class="line">ctrl + u: 删除一行</span><br><span class="line">⌘ + —/+/0: 调整字体大小</span><br><span class="line">⌘ + r:清屏，其实是滚到新的一屏，并没有清空。ctrl + l 也可以做到。</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2018/08/30/iTerm2 使用/#more">More >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">mac</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/30/iTerm2 使用/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -987,15 +994,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RN</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ios</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">mac</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RN</a>
               </li>
              
               <li class="article-tag-list-item">
