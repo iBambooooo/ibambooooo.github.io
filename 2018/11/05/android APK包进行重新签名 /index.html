@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | ibamboo</title>
+  <title>android 签名 | ibamboo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="划船不用桨，一生全靠浪">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ibamboo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="加固app 加固地址  1https://dev.bangcle.com 签名1jarsigner -verbose -keystore 证书名.keystore -signedjar 签名之后的文件.apk 需要签名的文件.apk  证书名 另外需要注意的是，如果你的jdk版本在1.7以上，你在对apk签名时，需要加上这个参数。 1-digestalg SHA1 -sigalg MD5withR">
+<meta name="keywords" content="RN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="android 签名">
+<meta property="og:url" content="http://yoursite.com/2018/11/05/android APK包进行重新签名 /index.html">
 <meta property="og:site_name" content="ibamboo">
-<meta property="og:description" content="划船不用桨，一生全靠浪">
+<meta property="og:description" content="加固app 加固地址  1https://dev.bangcle.com 签名1jarsigner -verbose -keystore 证书名.keystore -signedjar 签名之后的文件.apk 需要签名的文件.apk  证书名 另外需要注意的是，如果你的jdk版本在1.7以上，你在对apk签名时，需要加上这个参数。 1-digestalg SHA1 -sigalg MD5withR">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-05T07:01:14.268Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ibamboo">
-<meta name="twitter:description" content="划船不用桨，一生全靠浪">
+<meta name="twitter:title" content="android 签名">
+<meta name="twitter:description" content="加固app 加固地址  1https://dev.bangcle.com 签名1jarsigner -verbose -keystore 证书名.keystore -signedjar 签名之后的文件.apk 需要签名的文件.apk  证书名 另外需要注意的是，如果你的jdk版本在1.7以上，你在对apk签名时，需要加上这个参数。 1-digestalg SHA1 -sigalg MD5withR">
   
   
     <link rel="icon" href="/assets/image/竹子2.png">
@@ -143,36 +145,65 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-android APK包进行重新签名 " class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      android 签名
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/11/05/android APK包进行重新签名 /" class="archive-article-date">
+
+        
+        <a href="/2018/11/05/android APK包进行重新签名 /" class="archive-article-date">
   	<time datetime="2018-11-05T05:44:42.586Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-05</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/05/android APK包进行重新签名 /">android 签名</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="加固app"><a href="#加固app" class="headerlink" title="加固app"></a>加固app</h2><ul>
+<li>加固地址</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://dev.bangcle.com</span><br></pre></td></tr></table></figure>
+<h2 id="签名"><a href="#签名" class="headerlink" title="签名"></a>签名</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jarsigner -verbose -keystore 证书名.keystore -signedjar 签名之后的文件.apk 需要签名的文件.apk  证书名</span><br></pre></td></tr></table></figure>
+<p>另外需要注意的是，如果你的jdk版本在1.7以上，你在对apk签名时，需要加上这个参数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-digestalg SHA1 -sigalg MD5withRSA</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h4 id="查看签名信息"><a href="#查看签名信息" class="headerlink" title="查看签名信息"></a>查看签名信息</h4><ul>
+<li>查看keystore的信息</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -list -keystore demo.keystore -alias mykey -v</span><br></pre></td></tr></table></figure>
+<ul>
+<li>查看keystore的公钥证书信息</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -list -keystore demo.keystore -alias mykey -rfc</span><br></pre></td></tr></table></figure>
+<p>注：获取Base64格式的公钥证书，RFC 1421）</p>
+<ul>
+<li>查看apk的签名信息</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jarsigner -verify -verbose -certs &lt;your_apk_path.apk&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Android签名机制：生成keystore、签名、查看签名信息。Android独有的安全机制，除了权限机制外，另外一个就是签名机制了。签名机制主要用在以下两个主要场合起到其作用：升级App和权限检查。</p>
+<ul>
+<li>升级App<br>用户在升级一款已经安装过的App时，如果程序的修改来自于同一来源，则允许升级安装，否则会提示签名不一致无法安装的提示。</li>
+</ul>
+<h2 id="生成keystore"><a href="#生成keystore" class="headerlink" title="生成keystore"></a>生成keystore</h2><p>mac可以用keytool命令生成一个私有密钥。在 Windows 上keytool命令放在 JDK 的 bin 目录中（比如C:\Program Files\Java\jdkx.x.x_x\bin），你可能需要在命令行中先进入那个目录才能执行此命令。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000</span><br></pre></td></tr></table></figure>
+<p>生成的keystore在用户根目录下<br>my-release-key -证书名<br>10000  -有效期为10000天</p>
+<p>这条命令会要求你输入密钥库（keystore）和对应密钥的密码，然后设置一些发行相关的信息。最后它会生成一个叫做my-release-key.keystore的密钥库文件。</p>
+<p>在运行上面这条语句之后，密钥库里应该已经生成了一个单独的密钥，有效期为 10000 天。–alias 参数后面的别名是你将来为应用签名时所需要用到的，所以记得记录这个别名。</p>
+<p>注意：请记得妥善地保管好你的密钥库文件，一般不要上传到版本库或者其它的地方。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">$ keytool -genkey -v -alias android -keyalg RSA -validity 20000 -keystore /Users/czq/android.keystore</span><br><span class="line">输入密钥库口令:</span><br><span class="line">再次输入新口令:</span><br><span class="line">您的名字与姓氏是什么?</span><br><span class="line">  [Unknown]:  Tester</span><br><span class="line">您的组织单位名称是什么?</span><br><span class="line">  [Unknown]:  DCloud</span><br><span class="line">您的组织名称是什么?</span><br><span class="line">  [Unknown]:  Development</span><br><span class="line">您所在的城市或区域名称是什么?</span><br><span class="line">  [Unknown]:  广州</span><br><span class="line">您所在的省/市/自治区名称是什么?</span><br><span class="line">  [Unknown]:  广东</span><br><span class="line">该单位的双字母国家/地区代码是什么?</span><br><span class="line">  [Unknown]:  CN</span><br><span class="line">CN=Tester, OU=DCloud, O=Development, L=广州, ST=广东, C=CN是否正确?</span><br><span class="line">  [否]:  是</span><br><span class="line"></span><br><span class="line">正在为以下对象生成 2,048 位RSA密钥对和自签名证书 (SHA256withRSA) (有效期为 20,000 天):</span><br><span class="line">     CN=Tester, OU=DCloud, O=Development, L=广州, ST=广东, C=CN</span><br><span class="line">输入 &lt;android&gt; 的密钥口令</span><br><span class="line">    (如果和密钥库口令相同, 按回车):</span><br><span class="line">[正在存储/Users/czq/android.keystore]</span><br></pre></td></tr></table></figure>
+      
 
-        <div class="article-info info-on-right">
-          
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -184,350 +215,72 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/11/01/React Native项目升级与降级/" class="archive-article-date">
-  	<time datetime="2018-11-01T10:56:29.731Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-01</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/11/01/React Native项目升级与降级/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">React Native项目升级与降级</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/01/React Native项目升级与降级/">React Native项目升级与降级</a>
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">RN</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
+  
+    <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script type="text/javascript">
+if(true){
+	var gitalk = new Gitalk({
+  	clientID: 'b9959dc62407851b3b35',
+  	clientSecret: 'd3e63aac9bfeb83073480217f69fe062d20da424',
+  	repo: 'ibambooooo.github.io',
+  	owner: 'ibambooooo',
+  	admin: ['ibambooooo'],
+  	 id: 'Mon Nov 05 2018 13:44:42 GMT+0800', //页面的唯一标识。长度必须小于50
+    //id: window.location.pathname,
+     //类似Facebook评论框的全屏遮罩效果.
+  	distractionFreeMode: false
+})
+gitalk.render('gitalk-container') 
+}
+</script>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/10/31/iOS 模拟网络环境测试的方法/" class="archive-article-date">
-  	<time datetime="2018-10-31T05:55:37.682Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/10/31/iOS 模拟网络环境测试的方法/">iOS 模拟网络环境测试的方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">mac</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/10/31/WireShark抓包/" class="archive-article-date">
-  	<time datetime="2018-10-31T05:48:03.442Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/10/31/WireShark抓包/">WireShark抓包</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">mac</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/10/30/react-native打包apk/" class="archive-article-date">
-  	<time datetime="2018-10-30T14:19:14.136Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/10/30/react-native打包apk/">react-native 打包apk</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">RN</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/10/29/mac相关操作/" class="archive-article-date">
-  	<time datetime="2018-10-29T08:21:26.621Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/10/29/mac相关操作/">mac 相关操作</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">mac</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/10/24/Flastlist数据更新UI更新的问题/" class="archive-article-date">
-  	<time datetime="2018-10-24T03:06:18.670Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/10/24/Flastlist数据更新UI更新的问题/">FlatList数据源更新问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">RN</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/19/realm/" class="archive-article-date">
-  	<time datetime="2018-09-19T07:25:14.570Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/19/realm/">realm</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">RN</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/14/nativebase框架/" class="archive-article-date">
-  	<time datetime="2018-09-14T01:29:47.308Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-14</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/10/React Native 性能优化/" class="archive-article-date">
-  	<time datetime="2018-09-10T07:58:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/10/React Native 性能优化/">React Native 性能优化</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">RN</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
-  
-
-
           </div>
         </div>
       </div>
@@ -550,8 +303,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
