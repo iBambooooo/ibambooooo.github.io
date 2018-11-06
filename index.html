@@ -145,19 +145,19 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-MAC使用HOMEBREW安装指定版本NODEJS " class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-mac使用homebrew安装指定版本node " class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/06/MAC使用HOMEBREW安装指定版本NODEJS /">MAC使用homebrew安装指定版本的node</a>
+      <a class="article-title" href="/2018/11/06/mac使用homebrew安装指定版本node /">mac使用homebrew安装指定版本的node</a>
     </h1>
   
 
         
-        <a href="/2018/11/06/MAC使用HOMEBREW安装指定版本NODEJS /" class="archive-article-date">
+        <a href="/2018/11/06/mac使用homebrew安装指定版本node /" class="archive-article-date">
   	<time datetime="2018-11-06T03:21:37.593Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-06</time>
 </a>
         
@@ -168,19 +168,9 @@
         <p>选择这种安装方式，主要针对的是只安装了单一版本的node，没有通过nvm管理node，所以采取以下安装方式，虽然有点麻烦</p>
 <h2 id="homebrew安装"><a href="#homebrew安装" class="headerlink" title="homebrew安装"></a>homebrew安装</h2><p>通过 brew -v 查看，如果有相关的版本号，说明安装成功，如果没有就需要安装homebrew</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span><br></pre></td></tr></table></figure>
-<h2 id="查找Homebrew中可安装的node版本"><a href="#查找Homebrew中可安装的node版本" class="headerlink" title="查找Homebrew中可安装的node版本"></a>查找Homebrew中可安装的node版本</h2><p>通过命令查看<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew search node</span><br></pre></td></tr></table></figure></p>
-<p>得到结果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">leafnode     node         node@0.10    node@4       node@6      nodeenv</span><br><span class="line">llnode       node-build   node@0.12    node@5       nodebrew     nodenv</span><br><span class="line"></span><br><span class="line">//@4 @5是版本号</span><br></pre></td></tr></table></figure></p>
-<h2 id="安装-node"><a href="#安装-node" class="headerlink" title="安装 node"></a>安装 node</h2><p>安装之前必须先卸载之前的版本，以免发生冲突</p>
-<p>卸载命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew uninstall node</span><br></pre></td></tr></table></figure></p>
-<p>安装命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install node@6</span><br></pre></td></tr></table></figure></p>
-<h2 id="brew-link"><a href="#brew-link" class="headerlink" title="brew link"></a>brew link</h2><p>执行之前执行之前先unlink下,如果后边不跟版本号，默认安装的是最新版本</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew link node</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew link node@6</span><br></pre></td></tr></table></figure>
-<p>如果不错执行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew link --overwrite --force node@6</span><br></pre></td></tr></table></figure>
-<h2 id="查看node-版本"><a href="#查看node-版本" class="headerlink" title="查看node 版本"></a>查看node 版本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
-<p>如果出现 <code>node command not fond</code>,打开<code>.bash_profile</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export  PATH = &quot;/usr/local/opt/node/bin:$PATH&quot;</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2018/11/06/mac使用homebrew安装指定版本node /#more">More >></a>
+        
       
 
       
@@ -203,7 +193,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/06/MAC使用HOMEBREW安装指定版本NODEJS /">展开全文 >></a>
+          <a class="article-more-a" href="/2018/11/06/mac使用homebrew安装指定版本node /">展开全文 >></a>
         </p>
       
 
@@ -1028,7 +1018,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mac</a>
+                <a href="javascript:void(0)" class="js-tag color4">ios</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1036,7 +1026,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ios</a>
+                <a href="javascript:void(0)" class="js-tag color4">mac</a>
               </li>
              
               <li class="article-tag-list-item">
