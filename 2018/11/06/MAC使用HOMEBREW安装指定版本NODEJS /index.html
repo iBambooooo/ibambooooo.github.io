@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>ibamboo</title>
+  <title>MAC使用homebrew安装指定版本的node | ibamboo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="划船不用桨，一生全靠浪">
+  <meta name="description" content="选择这种安装方式，主要针对的是只安装了单一版本的node，没有通过nvm管理node，所以采取以下安装方式，虽然有点麻烦 homebrew安装通过 brew -v 查看，如果有相关的版本号，说明安装成功，如果没有就需要安装homebrew 1ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/m">
+<meta name="keywords" content="mac">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ibamboo">
-<meta property="og:url" content="http://yoursite.com/2018/09/14/nativebase框架/index.html">
+<meta property="og:title" content="MAC使用homebrew安装指定版本的node">
+<meta property="og:url" content="http://yoursite.com/2018/11/06/MAC使用HOMEBREW安装指定版本NODEJS /index.html">
 <meta property="og:site_name" content="ibamboo">
-<meta property="og:description" content="划船不用桨，一生全靠浪">
+<meta property="og:description" content="选择这种安装方式，主要针对的是只安装了单一版本的node，没有通过nvm管理node，所以采取以下安装方式，虽然有点麻烦 homebrew安装通过 brew -v 查看，如果有相关的版本号，说明安装成功，如果没有就需要安装homebrew 1ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/m">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-14T01:29:47.308Z">
+<meta property="og:updated_time" content="2018-11-06T04:04:47.014Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ibamboo">
-<meta name="twitter:description" content="划船不用桨，一生全靠浪">
+<meta name="twitter:title" content="MAC使用homebrew安装指定版本的node">
+<meta name="twitter:description" content="选择这种安装方式，主要针对的是只安装了单一版本的node，没有通过nvm管理node，所以采取以下安装方式，虽然有点麻烦 homebrew安装通过 brew -v 查看，如果有相关的版本号，说明安装成功，如果没有就需要安装homebrew 1ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/m">
   
   
     <link rel="icon" href="/assets/image/developer.png">
@@ -144,12 +145,42 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-nativebase框架" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-MAC使用HOMEBREW安装指定版本NODEJS " class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      MAC使用homebrew安装指定版本的node
+    </h1>
+  
+
+        
+        <a href="/2018/11/06/MAC使用HOMEBREW安装指定版本NODEJS /" class="archive-article-date">
+  	<time datetime="2018-11-06T03:21:37.593Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-06</time>
+</a>
+        
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>选择这种安装方式，主要针对的是只安装了单一版本的node，没有通过nvm管理node，所以采取以下安装方式，虽然有点麻烦</p>
+<h2 id="homebrew安装"><a href="#homebrew安装" class="headerlink" title="homebrew安装"></a>homebrew安装</h2><p>通过 brew -v 查看，如果有相关的版本号，说明安装成功，如果没有就需要安装homebrew</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="查找Homebrew中可安装的node版本"><a href="#查找Homebrew中可安装的node版本" class="headerlink" title="查找Homebrew中可安装的node版本"></a>查找Homebrew中可安装的node版本</h2><p>通过命令查看<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew search node</span><br></pre></td></tr></table></figure></p>
+<p>得到结果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">leafnode     node         node@0.10    node@4       node@6      nodeenv</span><br><span class="line">llnode       node-build   node@0.12    node@5       nodebrew     nodenv</span><br><span class="line"></span><br><span class="line">//@4 @5是版本号</span><br></pre></td></tr></table></figure></p>
+<h2 id="安装-node"><a href="#安装-node" class="headerlink" title="安装 node"></a>安装 node</h2><p>安装之前必须先卸载之前的版本，以免发生冲突</p>
+<p>卸载命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew uninstall node</span><br></pre></td></tr></table></figure></p>
+<p>安装命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install node@6</span><br></pre></td></tr></table></figure></p>
+<h2 id="brew-link"><a href="#brew-link" class="headerlink" title="brew link"></a>brew link</h2><p>执行之前执行之前先unlink下,如果后边不跟版本号，默认安装的是最新版本</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew link node</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew link node@6</span><br></pre></td></tr></table></figure>
+<p>如果不错执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew link --overwrite --force node@6</span><br></pre></td></tr></table></figure>
+<h2 id="查看node-版本"><a href="#查看node-版本" class="headerlink" title="查看node 版本"></a>查看node 版本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
+<p>如果出现 <code>node command not fond</code>,打开<code>.bash_profile</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export  PATH = &quot;/usr/local/opt/node/bin:$PATH&quot;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -157,6 +188,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">mac</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -170,18 +212,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/09/19/realm/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          realm
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/09/10/React Native 性能优化/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">React Native 性能优化</div>
+    <a href="/2018/11/05/android APK包进行重新签名 /" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">android 签名</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -221,7 +254,7 @@ if(true){
   	repo: 'ibambooooo.github.io',
   	owner: 'ibambooooo',
   	admin: ['ibambooooo'],
-  	 id: 'Fri Sep 14 2018 09:29:47 GMT+0800', //页面的唯一标识。长度必须小于50
+  	 id: 'Tue Nov 06 2018 11:21:37 GMT+0800', //页面的唯一标识。长度必须小于50
     //id: window.location.pathname,
      //类似Facebook评论框的全屏遮罩效果.
   	distractionFreeMode: false
@@ -316,7 +349,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ios</a>
+                <a href="javascript:void(0)" class="js-tag color4">mac</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -324,7 +357,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mac</a>
+                <a href="javascript:void(0)" class="js-tag color4">ios</a>
               </li>
              
               <li class="article-tag-list-item">
