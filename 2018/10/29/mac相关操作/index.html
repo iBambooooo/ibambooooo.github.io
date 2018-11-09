@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>mac 相关操作 | ibamboo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="安装任何来源的文件1sudo spctl --master-disable">
+  <meta name="description" content="[toc] 安装任何来源的文件「xxx.app已损坏,打不开.你应该将它移到废纸篓」，并非你安装的软件已损坏，而是Mac系统的安全设置问题，因为这些应用都是破解或者汉化的,那么解决方法就是临时改变Mac系统安全设置。出现这个问题的解决方法： 修改系统配置：系统偏好设置… -&amp;gt; 安全性与隐私。修改为任何来源 如果没有这个选项的话（macOS Sierra 10.12）,打开终端执行 1sudo">
 <meta name="keywords" content="mac">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mac 相关操作">
 <meta property="og:url" content="http://yoursite.com/2018/10/29/mac相关操作/index.html">
 <meta property="og:site_name" content="ibamboo">
-<meta property="og:description" content="安装任何来源的文件1sudo spctl --master-disable">
+<meta property="og:description" content="[toc] 安装任何来源的文件「xxx.app已损坏,打不开.你应该将它移到废纸篓」，并非你安装的软件已损坏，而是Mac系统的安全设置问题，因为这些应用都是破解或者汉化的,那么解决方法就是临时改变Mac系统安全设置。出现这个问题的解决方法： 修改系统配置：系统偏好设置… -&amp;gt; 安全性与隐私。修改为任何来源 如果没有这个选项的话（macOS Sierra 10.12）,打开终端执行 1sudo">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-30T06:08:58.961Z">
+<meta property="og:updated_time" content="2018-11-09T01:44:28.455Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mac 相关操作">
-<meta name="twitter:description" content="安装任何来源的文件1sudo spctl --master-disable">
+<meta name="twitter:description" content="[toc] 安装任何来源的文件「xxx.app已损坏,打不开.你应该将它移到废纸篓」，并非你安装的软件已损坏，而是Mac系统的安全设置问题，因为这些应用都是破解或者汉化的,那么解决方法就是临时改变Mac系统安全设置。出现这个问题的解决方法： 修改系统配置：系统偏好设置… -&amp;gt; 安全性与隐私。修改为任何来源 如果没有这个选项的话（macOS Sierra 10.12）,打开终端执行 1sudo">
   
   
     <link rel="icon" href="/assets/image/developer.png">
@@ -165,19 +165,51 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="安装任何来源的文件"><a href="#安装任何来源的文件" class="headerlink" title="安装任何来源的文件"></a>安装任何来源的文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo spctl --master-disable</span><br></pre></td></tr></table></figure>
+        <p>[toc]</p>
+<h2 id="安装任何来源的文件"><a href="#安装任何来源的文件" class="headerlink" title="安装任何来源的文件"></a>安装任何来源的文件</h2><p>「xxx.app已损坏,打不开.你应该将它移到废纸篓」，并非你安装的软件已损坏，而是Mac系统的安全设置问题，因为这些应用都是破解或者汉化的,那么解决方法就是临时改变Mac系统安全设置。<br>出现这个问题的解决方法：</p>
+<p>修改系统配置：系统偏好设置… -&gt; 安全性与隐私。修改为任何来源</p>
+<p>如果没有这个选项的话（macOS Sierra 10.12）,打开终端执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo spctl --master-disable</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <h2 id="dock-隐藏模式下弹出的时间调整-弹出前延时速度"><a href="#dock-隐藏模式下弹出的时间调整-弹出前延时速度" class="headerlink" title="dock 隐藏模式下弹出的时间调整  弹出前延时速度"></a>dock 隐藏模式下弹出的时间调整  弹出前延时速度</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">defaults write com.apple.Dock autohide-delay -int 0 &amp;&amp; killall Dock</span><br></pre></td></tr></table></figure>
 <ul>
-<li>弹出及隐藏的过程的动画的速度<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">defaults write com.apple.dock autohide-time-modifier -int 0; killall Dock</span><br></pre></td></tr></table></figure>
-</li>
+<li>弹出及隐藏的过程的动画的速度</li>
 </ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">defaults write com.apple.dock autohide-time-modifier -int 0; killall Dock</span><br></pre></td></tr></table></figure>
 <p>以上命令将时间设置为0，将无动画效果，瞬间显示Dock栏。</p>
 <ul>
 <li>若使用动画过渡时间（这里0.3s）</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">defaults write com.apple.dock autohide-time-modifier -float 0.3;killall Dock</span><br></pre></td></tr></table></figure>
 <p>总结一下就是当要设置为0值时，需要用int，用小数时需要用<code>float</code>。<br><code>autohide-delay</code>和<code>autohide-time-modifier</code>分别控制弹出前的延时和弹出动画的时间。</p>
+<h2 id="mac-常用快捷键"><a href="#mac-常用快捷键" class="headerlink" title="mac 常用快捷键"></a>mac 常用快捷键</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">* 按 Command + shift + . 可以显示隐藏系统文件</span><br><span class="line"></span><br><span class="line">* 按住 ⌘ 键，可以拖动非焦点窗口同时不激活她</span><br><span class="line"></span><br><span class="line">* 创建文件快捷方式：按住Command+option拖动文件或者程序到桌面</span><br><span class="line"></span><br><span class="line">* Shift-Command-C 打开“电脑”窗口。</span><br><span class="line"></span><br><span class="line">* Shift-Command-D 打开“桌面”文件夹。</span><br><span class="line"></span><br><span class="line">* Command + control + F   最大化  最小化</span><br><span class="line"></span><br><span class="line">* ⌃ ＋ ⌘ ＋ space 可以输入emoji，图片字符，特殊符号（使用率较高）</span><br><span class="line"></span><br><span class="line">* Command + k 连接服务器</span><br></pre></td></tr></table></figure>
+<p>注：<code>按 Command + shift + . 可以显示隐藏系统文件</code> 这个在高版本适用，os低版本可以使用<br>显示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">defaults write com.apple.finder AppleShowAllFiles -boolean true ; killall Finder</span><br></pre></td></tr></table></figure></p>
+<p>隐藏<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">defaults write com.apple.finder AppleShowAllFiles -boolean false ; killall Finder</span><br></pre></td></tr></table></figure></p>
+<h2 id="Mac-OS-Linux命令查询网络端口占用情况"><a href="#Mac-OS-Linux命令查询网络端口占用情况" class="headerlink" title="Mac OS/Linux命令查询网络端口占用情况"></a>Mac OS/Linux命令查询网络端口占用情况</h2><ul>
+<li>netstat命令</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -an | grep 3306</span><br></pre></td></tr></table></figure>
+<p>3306替换成需要grep的端口号</p>
+<ul>
+<li>lsof命令<br>通过list open file命令可以查看到当前打开文件，在linux中所有事物都是以文件形式存在，包括网络连接及硬件设备。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsof -i:80</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>-i参数表示网络链接，:80指明端口号，该命令会同时列出PID，方便kill<br>查看所有进程监听的端口<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo lsof -i -P | grep -i “listen”</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>查看端口</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsof -i:8001</span><br></pre></td></tr></table></figure>
+<p>输出结果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">COMMAND PID USER FD TYPE DEVICE SIZE/OFF NODE NAME</span><br><span class="line">node 1577 relign 24u IPv4 0xf4c52151f2395907 0t0 TCP *:vcom-tunnel (LISTEN)</span><br></pre></td></tr></table></figure></p>
+<p>输出各列信息的意义如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">COMMAND 进程的名称,也就是启动的程序名</span><br><span class="line">PID 进程的ID</span><br><span class="line">USER 进程属主的名字</span><br><span class="line">FD 文件描述符,应用程序通过文件描述符识别该文件.如CWD,txt等</span><br><span class="line">TYPE 文件的类型,如DIR、REG等</span><br><span class="line">DEVICE 指定磁盘的名称</span><br><span class="line">SIZE 文件的大小</span><br><span class="line">NODE 索引节点(文件在磁盘上的标识)</span><br><span class="line">NAME 打开文件的确切名称</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>关闭进程</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kill -9 1577 [PID]</span><br></pre></td></tr></table></figure>
+<p>终止一个进程或终止一个正在运行的程序,一般是通过kill、killall、pkill、xkill等进行.比如一个程序已经死掉,但又不能退出,这时就应该考虑应用这些</p>
+<ul>
+<li>killall</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">killall通过程序的名字,直接杀死所有进程.</span><br></pre></td></tr></table></figure>
 
       
 
