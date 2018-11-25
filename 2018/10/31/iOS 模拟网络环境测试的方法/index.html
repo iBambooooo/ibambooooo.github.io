@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>iOS 模拟网络环境测试的方法 | ibamboo</title>
+  <title>iOS 模拟网络环境测试 | ibamboo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="https://www.jianshu.com/p/99611d342fa1 //iOS开发-调试网络限速（真机和模拟器）https://blog.csdn.net/Zhai19931004/article/details/52127685 100%Loss是全丢包, 3G这个就不用说了吧 DSL是电话线上网, Edge是2G网络， High Latency DNS是高延迟， Very Bad N">
+  <meta name="description" content="Network Link Conditioner介绍  安装   去Apple Developer Downloads搜索Hardware IO Tools for Xcode,下载最新的就行，安装后，在系统偏好设置的最下边，就能看到了，打开即可  参数说明  1234567EDGE（2G）3GDSL（电话线上网）WiFiHigh Latency DNS（高延迟）Very Bad Network（">
 <meta name="keywords" content="mac">
 <meta property="og:type" content="article">
-<meta property="og:title" content="iOS 模拟网络环境测试的方法">
+<meta property="og:title" content="iOS 模拟网络环境测试">
 <meta property="og:url" content="http://yoursite.com/2018/10/31/iOS 模拟网络环境测试的方法/index.html">
 <meta property="og:site_name" content="ibamboo">
-<meta property="og:description" content="https://www.jianshu.com/p/99611d342fa1 //iOS开发-调试网络限速（真机和模拟器）https://blog.csdn.net/Zhai19931004/article/details/52127685 100%Loss是全丢包, 3G这个就不用说了吧 DSL是电话线上网, Edge是2G网络， High Latency DNS是高延迟， Very Bad N">
+<meta property="og:description" content="Network Link Conditioner介绍  安装   去Apple Developer Downloads搜索Hardware IO Tools for Xcode,下载最新的就行，安装后，在系统偏好设置的最下边，就能看到了，打开即可  参数说明  1234567EDGE（2G）3GDSL（电话线上网）WiFiHigh Latency DNS（高延迟）Very Bad Network（">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-31T06:04:28.502Z">
+<meta property="og:updated_time" content="2018-11-25T05:20:20.207Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="iOS 模拟网络环境测试的方法">
-<meta name="twitter:description" content="https://www.jianshu.com/p/99611d342fa1 //iOS开发-调试网络限速（真机和模拟器）https://blog.csdn.net/Zhai19931004/article/details/52127685 100%Loss是全丢包, 3G这个就不用说了吧 DSL是电话线上网, Edge是2G网络， High Latency DNS是高延迟， Very Bad N">
+<meta name="twitter:title" content="iOS 模拟网络环境测试">
+<meta name="twitter:description" content="Network Link Conditioner介绍  安装   去Apple Developer Downloads搜索Hardware IO Tools for Xcode,下载最新的就行，安装后，在系统偏好设置的最下边，就能看到了，打开即可  参数说明  1234567EDGE（2G）3GDSL（电话线上网）WiFiHigh Latency DNS（高延迟）Very Bad Network（">
   
   
     <link rel="icon" href="/assets/image/developer.png">
@@ -152,7 +152,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      iOS 模拟网络环境测试的方法
+      iOS 模拟网络环境测试
     </h1>
   
 
@@ -165,14 +165,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="https://www.jianshu.com/p/99611d342fa1" target="_blank" rel="noopener">https://www.jianshu.com/p/99611d342fa1</a></p>
-<p>//iOS开发-调试网络限速（真机和模拟器）<br><a href="https://blog.csdn.net/Zhai19931004/article/details/52127685" target="_blank" rel="noopener">https://blog.csdn.net/Zhai19931004/article/details/52127685</a></p>
-<p>100%Loss是全丢包,</p>
-<p>3G这个就不用说了吧</p>
-<p>DSL是电话线上网,</p>
-<p>Edge是2G网络，</p>
-<p>High Latency DNS是高延迟，</p>
-<p>Very Bad Network是网络状况不稳定。</p>
+        <h2 id="Network-Link-Conditioner"><a href="#Network-Link-Conditioner" class="headerlink" title="Network Link Conditioner"></a>Network Link Conditioner</h2><p><a href="https://nshipster.com/network-link-conditioner/" target="_blank" rel="noopener">介绍</a></p>
+<ul>
+<li>安装 </li>
+</ul>
+<p>去<a href="https://developer.apple.com/download/more/" target="_blank" rel="noopener">Apple Developer Downloads</a>搜索<code>Hardware IO Tools for Xcode</code>,下载最新的就行<br>，安装后，在系统偏好设置的最下边，就能看到了，打开即可</p>
+<ul>
+<li>参数说明</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">EDGE（2G）</span><br><span class="line">3G</span><br><span class="line">DSL（电话线上网）</span><br><span class="line">WiFi</span><br><span class="line">High Latency DNS（高延迟）</span><br><span class="line">Very Bad Network（网络状况不稳定）</span><br><span class="line">100% Loss（全丢包）</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<ul>
+<li>iphone 真机</li>
+</ul>
+<p>如果真机连接xcode，就会激活开发者，在真机设置中找到开发者（就是xcode的那个锤子🔨icon），然后打开<br>找到 <code>NETWORK LINK CONDITIONER</code>,可以看到status整个选项，选择对应的网络状况即可</p>
+<p>👀：这个开启后影响的是整个系统(macOS / iOS)，的网络状况，记得关哦<br><a href="https://www.jianshu.com/p/99611d342fa1" target="_blank" rel="noopener">https://www.jianshu.com/p/99611d342fa1</a></p>
 
       
 
@@ -351,6 +358,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">环境</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ios</a>
               </li>
              
@@ -359,19 +370,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">环境</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">mac</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">工具</a>
               </li>
             
             <div class="clearfix"></div>
