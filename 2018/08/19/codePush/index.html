@@ -535,7 +535,7 @@
 <h2 id="补丁更新"><a href="#补丁更新" class="headerlink" title="补丁更新"></a>补丁更新</h2><p>在发布更新之后，可能有这样的场景，你需要修改一个或多个相关的属性（如：你忘记给一个严重的Bug修复打上强制标记了，你想增加更新的首次展示百分比）。你可以很容易的用下面的命令行来实现：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">code-push patch &lt;appName&gt; &lt;deploymentName&gt;</span><br><span class="line">[--label &lt;releaseLabel&gt;]</span><br><span class="line">[--mandatory &lt;isMandatory&gt;]</span><br><span class="line">[--description &lt;description&gt;]</span><br><span class="line">[--rollout &lt;rolloutPercentage&gt;]</span><br><span class="line">[--disabled &lt;isDisabled&gt;]</span><br><span class="line">[--targetBinaryVersion &lt;targetBinaryVersion&gt;]</span><br></pre></td></tr></table></figure>
 <p>抛开<code>appName</code> 和 <code>deploymentName</code>，所有参数是可选的，所以，你可以用这个命令一次性更新单个或者所有属性。调用<code>patch</code>命令而不指定任何属性将不产生任何操作结果。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> Mark the latest production release as mandatory</span><br><span class="line">code-push patch MyApp Production -m</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> Increase the rollout for v23 to 50%</span><br><span class="line">code-push patch MyApp Production -l v23 -rollout 50%</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Mark the latest production release as mandatory</span></span><br><span class="line">code-push patch MyApp Production -m</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Increase the rollout <span class="keyword">for</span> v23 to 50%</span></span><br><span class="line">code-push patch MyApp Production -l v23 -rollout 50%</span><br></pre></td></tr></table></figure>
 <h3 id="Label-参数"><a href="#Label-参数" class="headerlink" title="Label 参数"></a>Label 参数</h3><p>表明你想在指定的部署环境里更新哪个发布版本（如：<code>v23</code>）。如果省略了，那要求的变化将应用到指定的部署环境的最新版本上。为了查看你想更新的版本标签，你可以运行<code>code-push deployment history</code>命令并参见<code>Label</code>列。</p>
 <p><em>注意：这个参数可以设置成<code>--label</code>或<code>-l</code></em></p>
 <h3 id="Mandatory-参数-2"><a href="#Mandatory-参数-2" class="headerlink" title="Mandatory 参数"></a>Mandatory 参数</h3><p>同样的参数跟<a href="#mandatory-参数">上面的章节</a>描述一致，简单的允许你更改这个版本是否考虑强制更新。注意<code>--mandatory</code>和<code>--mandatory true</code>是同等的，但是缺少这个标记不等于<code>--mandatory false</code>。所以，如果参数省略了，对目标版本的强制性属性来说不会产生任何改变。你需要设置<code>--mandatory false</code>去明确的标识版本是可选的。</p>
@@ -544,7 +544,7 @@
 <h3 id="Rollout-参数-3"><a href="#Rollout-参数-3" class="headerlink" title="Rollout 参数"></a>Rollout 参数</h3><p>同样的参数跟<a href="#rollout-参数">上面的章节</a>描述一致，简单的允许你去<strong>增加</strong>目标版本首次展示的百分比。这个参数只能设成一个比当前首次展示值要大的数字。此外，如果你想”完全的”首次展示，因此，让版本对每个人有效，你可以简单的设置参数<code>--rollout 100</code>，如果省略了这个参数，目标版本的首次展示(rollout)属性不会有任何改动。</p>
 <p>此外，上面提到的，当你发布版本时没有指定首次展示(rollout)的值时，它相当于是被设置成了<code>100</code>。因此，如果你发布一个没有首次展示的更新，那你不可以通过<code>patch</code>命令改变rollout属性，因为那样是被认为在降低首次展示(rolltout)百分比。</p>
 <h3 id="Target-binary-version-参数-2"><a href="#Target-binary-version-参数-2" class="headerlink" title="Target binary version 参数"></a>Target binary version 参数</h3><p>同样的参数跟<a href="#target-binary-version-参数">上面的章节</a>描述一致，简单的允许你去更改语义版本范围表明兼容哪个版本版本。这个可以很有用，如果你在最初发布时犯了个错（如：你指定<code>1.0.0</code>但本意<code>1.1.0</code>）或你想增加或减少版本支持的版本范围（如：你发现一个版本总是不能在<code>1.1.2</code>版本上正常运行）。如果省略了这个参数，目标版本的版本号属性不会有任何改动。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 给意境存在的版本添加一个"最大二进制版本"范围</span><br><span class="line"><span class="meta">#</span>  by scoping its eligibility to users running &gt;= 1.0.5</span><br><span class="line">code-push patch MyApp Staging -t "1.0.0 - 1.0.5"</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 给意境存在的版本添加一个<span class="string">"最大二进制版本"</span>范围</span></span><br><span class="line"><span class="meta">#</span><span class="bash">  by scoping its eligibility to users running &gt;= 1.0.5</span></span><br><span class="line">code-push patch MyApp Staging -t "1.0.0 - 1.0.5"</span><br></pre></td></tr></table></figure>
 <h2 id="促进更新"><a href="#促进更新" class="headerlink" title="促进更新"></a>促进更新</h2><p>一旦测试完指定部署环境的版本更新（如：<code>Staging</code>），你想把它向下游推进（如：dev-&gt;staging, staging-&gt;production)，你可以简单的用如下命令去从一个部署环境拷贝到另一个：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">code-push promote &lt;appName&gt; &lt;sourceDeploymentName&gt; &lt;destDeploymentName&gt;</span><br><span class="line">[--description &lt;description&gt;]</span><br><span class="line">[--disabled &lt;disabled&gt;]</span><br><span class="line">[--mandatory]</span><br><span class="line">[--rollout &lt;rolloutPercentage&gt;]</span><br><span class="line">[--targetBinaryVersion &lt;targetBinaryVersion]</span><br></pre></td></tr></table></figure>
 <p>这个<code>promote</code>命令将在部署环境里创建一个新的版本，包含<strong>准确的代码和元数据</strong>（描述，强制和目标版本号）来自源部署环境的最新版本。然而你可以用<code>release</code>命令去”手动”从一个环境移植更新到另一个环境，<code>promote</code>命令有如下优势：</p>
@@ -560,7 +560,7 @@
 <h3 id="Mandatory-参数-3"><a href="#Mandatory-参数-3" class="headerlink" title="Mandatory 参数"></a>Mandatory 参数</h3><p>相同的参数在参数<a href="#mandatory-参数">上面的章节</a>描述过，简单的允许你覆写将使用的提升版本的强制标记。如果没有指定，新版本将继承被提升版本的强制属性的值。</p>
 <h3 id="Rollout-参数-4"><a href="#Rollout-参数-4" class="headerlink" title="Rollout 参数"></a>Rollout 参数</h3><p>相同的参数在参数<a href="#rollout-参数">上面的章节</a>描述过， 允许你指定新创建的版本是否只对部分用户有效。不像其它的元数据参数（如：<code>description</code>），版本的<code>rollout</code>属性不会做为提升的一部分而携带过来，所以，如果你不想新的版本对所有用户有效的话，你需要明确去设置它。</p>
 <h3 id="Target-binary-version-参数-3"><a href="#Target-binary-version-参数-3" class="headerlink" title="Target binary version 参数"></a>Target binary version 参数</h3><p>相同的参数在<a href="#target-binary-version-参数">上面的章节</a>描述过，简单的允许你覆写使用的提升版本的版本号(target binary version)。如果没有指定，新的版本将继承被提升版本的版本号。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> Promote the release to production and make it</span><br><span class="line"><span class="meta">#</span> available to all versions using that deployment</span><br><span class="line">code-push promote MyApp Staging Production -t "*"</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Promote the release to production and make it</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> available to all versions using that deployment</span></span><br><span class="line">code-push promote MyApp Staging Production -t "*"</span><br></pre></td></tr></table></figure>
 <h2 id="回滚更新"><a href="#回滚更新" class="headerlink" title="回滚更新"></a>回滚更新</h2><p>一个部署环境的发布历史是不可以改变的，所以一旦被发布你不能删除或移除更新。然而，如果你发布了一个坏的更新或包含计划外的功能，使用<code>rollback</code>命令很容易把它回滚：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">code-push rollback &lt;appName&gt; &lt;deploymentName&gt;</span><br><span class="line">code-push rollback MyApp Production</span><br></pre></td></tr></table></figure>
 <p>这个的影响是在部署环境里创建一个包含<strong>精确的代码和资源</strong>的新版本，比最新版本更优先的一个版本。举个例子，想象你发布了如下更新：</p>
@@ -814,11 +814,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">环境</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ios</a>
+                <a href="javascript:void(0)" class="js-tag color3">开发</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -826,7 +822,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">环境</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">mac</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ios</a>
               </li>
              
               <li class="article-tag-list-item">
