@@ -165,7 +165,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h2><p><a href="https://my.vultr.com/" target="_blank" rel="noopener">https://my.vultr.com/</a><br>注册vultr通过这个，有优惠，你充值会有奖励，我也会得赏金</p>
+        <h2 id="ssr-服务器"><a href="#ssr-服务器" class="headerlink" title="ssr 服务器"></a>ssr 服务器</h2><p><a href="https://my.vultr.com/" target="_blank" rel="noopener">https://my.vultr.com/</a><br>注册vultr通过这个，有优惠，你充值会有奖励，我也会得赏金</p>
 <ul>
 <li>10刀的奖励（你得冲10刀，貌似你送10刀，我送10刀）<br><a href="https://www.vultr.com/?ref=7808268" target="_blank" rel="noopener">https://www.vultr.com/?ref=7808268</a></li>
 <li>25刀的奖励（你得冲25刀，貌似你可以有25刀的奖励，我也是25刀）<br><a href="https://www.vultr.com/?ref=7808965-4F" target="_blank" rel="noopener">https://www.vultr.com/?ref=7808965-4F</a></li>
@@ -815,14 +815,12 @@
       
         <h2 id="main-jsbundle-does-not-exist-This-must-be-a-bug-with-echo-‘React-Native"><a href="#main-jsbundle-does-not-exist-This-must-be-a-bug-with-echo-‘React-Native" class="headerlink" title="main.jsbundle does not exist. This must be a bug with + echo ‘React Native"></a>main.jsbundle does not exist. This must be a bug with + echo ‘React Native</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">react-native bundle --entry-file ./index.ios.js --platform ios --bundle-output ios/main.jsbundle</span><br></pre></td></tr></table></figure>
 <ul>
-<li>有时候用xcode打包会报<figure class="highlight plain"><figcaption><span>does not exist. This must be a bug with + echo 'React Native```错，还有时候可能找不到```react-native run-ios```的时候也报不到具体的错，用以上代码生成一下`main.jsbundle`有写错就能报出具体位置</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## Redefinition of RCTMethodInfo</span><br><span class="line">这个报错一般是因为,依赖库出问题，使用xcode运行，找到具提文件，需要修改</span><br></pre></td></tr></table></figure></li>
+<li>有时候用xcode打包会报</li>
 </ul>
-<p>#import “RCTBridgeModule.h”  —&gt;</p>
-<p>#import &lt;React/RCTBridgeModule.h&gt;</p>
-<p>#import “RCTBridge.h”   —&gt; </p>
-<p>#import &lt;React/RCTBridge.h&gt;</p>
-<p><code>`</code></p>
-
+<figure class="highlight plain"><figcaption><span>does not exist. This must be a bug with + echo 'React Native```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">错，还有时候可能找不到</span><br><span class="line">```react-native run-ios</span><br></pre></td></tr></table></figure>
+<p>的时候也报不到具体的错，用以上代码生成一下<code>main.jsbundle</code>有写错就能报出具体位置</p>
+<h2 id="Redefinition-of-RCTMethodInfo"><a href="#Redefinition-of-RCTMethodInfo" class="headerlink" title="Redefinition of RCTMethodInfo"></a>Redefinition of RCTMethodInfo</h2><p>这个报错一般是因为,依赖库出问题，使用xcode运行，找到具提文件，需要修改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#import &quot;RCTBridgeModule.h&quot;  ---&gt;</span><br><span class="line">#import &lt;React/RCTBridgeModule.h&gt;</span><br><span class="line">#import &quot;RCTBridge.h&quot;   ---&gt; </span><br><span class="line">#import &lt;React/RCTBridge.h&gt;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -1049,6 +1047,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ios</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">RN</a>
               </li>
              
@@ -1057,15 +1059,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ios</a>
+                <a href="javascript:void(0)" class="js-tag color4">mac</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">环境</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mac</a>
               </li>
              
               <li class="article-tag-list-item">
