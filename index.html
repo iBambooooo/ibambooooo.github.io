@@ -145,6 +145,184 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-搭梯子" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/28/搭梯子/">ssr 搭梯子</a>
+    </h1>
+  
+
+        
+        <a href="/2019/01/28/搭梯子/" class="archive-article-date">
+  	<time datetime="2019-01-28T07:41:27.113Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h2><p><a href="https://my.vultr.com/" target="_blank" rel="noopener">https://my.vultr.com/</a><br>注册vultr通过这个，有优惠，你充值会有奖励，我也会得赏金</p>
+<ul>
+<li>10刀的奖励（你得冲10刀，貌似你送10刀，我送10刀）<br><a href="https://www.vultr.com/?ref=7808268" target="_blank" rel="noopener">https://www.vultr.com/?ref=7808268</a></li>
+<li>25刀的奖励（你得冲25刀，貌似你可以有25刀的奖励，我也是25刀）<br><a href="https://www.vultr.com/?ref=7808965-4F" target="_blank" rel="noopener">https://www.vultr.com/?ref=7808965-4F</a></li>
+<li><p>其他的类似搬瓦工都行，只要是有些要双币银行卡，vultr可以支付宝和微信支付</p>
+</li>
+<li><p>注意<br>有些服务器只支持ipv6</p>
+</li>
+</ul>
+        
+          <a class="article-more-a" href="/2019/01/28/搭梯子/#more">More >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">环境</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/01/28/搭梯子/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
+    <article id="post-codePush私有化部署以及RN热更新" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/23/codePush私有化部署以及RN热更新/">codePush私有化部署以及RN热更新</a>
+    </h1>
+  
+
+        
+        <a href="/2019/01/23/codePush私有化部署以及RN热更新/" class="archive-article-date">
+  	<time datetime="2019-01-23T07:41:37.029Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://github.com/lisong/code-push-server" target="_blank" rel="noopener">私有化部署使用源码</a></p>
+<blockquote>
+<p>以下是测试环境 在mac配置的</p>
+</blockquote>
+<h2 id="安装node-环境"><a href="#安装node-环境" class="headerlink" title="安装node 环境"></a>安装node 环境</h2><h2 id="配置mysql环境"><a href="#配置mysql环境" class="headerlink" title="配置mysql环境"></a>配置mysql环境</h2><h2 id="安装code-push-server"><a href="#安装code-push-server" class="headerlink" title="安装code-push-server"></a>安装code-push-server</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install code-push-server -g</span><br></pre></td></tr></table></figure>
+<ul>
+<li>cd 到 code-push-server 根目录 修改数据库配置</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim  ./bin/db</span><br></pre></td></tr></table></figure>
+<p>27行<br><img src="/2019/01/23/codePush私有化部署以及RN热更新/001.png" alt=""></p>
+<ul>
+<li>初始化数据库</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">code-push-server-db init --dbhost localhost --dbuser root --dbpassword sqa123456</span><br></pre></td></tr></table></figure>
+<p>出现sucess 就算成功了</p>
+<ul>
+<li>启动 code-push-server 服务</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">code-push-server #启动服务</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2019/01/23/codePush私有化部署以及RN热更新/#more">More >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">RN</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/01/23/codePush私有化部署以及RN热更新/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
     <article id="post-MAMP" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -639,8 +817,11 @@
 <ul>
 <li>有时候用xcode打包会报<figure class="highlight plain"><figcaption><span>does not exist. This must be a bug with + echo 'React Native```错，还有时候可能找不到```react-native run-ios```的时候也报不到具体的错，用以上代码生成一下`main.jsbundle`有写错就能报出具体位置</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## Redefinition of RCTMethodInfo</span><br><span class="line">这个报错一般是因为,依赖库出问题，使用xcode运行，找到具提文件，需要修改</span><br></pre></td></tr></table></figure></li>
 </ul>
-<p>#import “RCTBridgeModule.h”  —&gt;   #import &lt;React/RCTBridgeModule.h&gt;</p>
-<p>#import “RCTBridge.h”   —&gt;  #import &lt;React/RCTBridge.h&gt;<br><code>`</code></p>
+<p>#import “RCTBridgeModule.h”  —&gt;</p>
+<p>#import &lt;React/RCTBridgeModule.h&gt;</p>
+<p>#import “RCTBridge.h”   —&gt; </p>
+<p>#import &lt;React/RCTBridge.h&gt;</p>
+<p><code>`</code></p>
 
       
 
@@ -777,170 +958,6 @@
 
   
   
-    <article id="post-vue环境搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/24/vue环境搭建/">vue环境搭建</a>
-    </h1>
-  
-
-        
-        <a href="/2018/11/24/vue环境搭建/" class="archive-article-date">
-  	<time datetime="2018-11-24T13:25:53.462Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul>
-<li>webpack</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack -g</span><br></pre></td></tr></table></figure>
-<ul>
-<li>vue脚手架</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install vue-cli -g</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2018/11/24/vue环境搭建/#more">More >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">环境</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/24/vue环境搭建/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
-    <article id="post-webpack" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/24/webpack/">webpack</a>
-    </h1>
-  
-
-        
-        <a href="/2018/11/24/webpack/" class="archive-article-date">
-  	<time datetime="2018-11-24T12:55:48.505Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h2><p>webpack是前端的一个项目构建工具，基于node.js开发的。作用：</p>
-<ol>
-<li>能够关系处理js互相依赖</li>
-<li>处理浏览器语法兼容问题</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- 区别</span><br><span class="line">webpack - 是基于整个项目进行构建的</span><br><span class="line">gulp - 是基于task任务的，小巧灵活，适合小的构建</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2018/11/24/webpack/#more">More >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">环境</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/24/webpack/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1032,7 +1049,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ios</a>
+                <a href="javascript:void(0)" class="js-tag color3">RN</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1040,7 +1057,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RN</a>
+                <a href="javascript:void(0)" class="js-tag color4">ios</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="ibamboo">
 <meta property="og:description" content="main.jsbundle does not exist. This must be a bug with + echo ‘React Native1react-native bundle --entry-file ./index.ios.js --platform ios --bundle-output ios/main.jsbundle  有时候用xcode打包会报does not exist">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-08T02:40:05.161Z">
+<meta property="og:updated_time" content="2019-01-28T14:10:33.801Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS报错整理">
 <meta name="twitter:description" content="main.jsbundle does not exist. This must be a bug with + echo ‘React Native1react-native bundle --entry-file ./index.ios.js --platform ios --bundle-output ios/main.jsbundle  有时候用xcode打包会报does not exist">
@@ -169,8 +169,11 @@
 <ul>
 <li>有时候用xcode打包会报<figure class="highlight plain"><figcaption><span>does not exist. This must be a bug with + echo 'React Native```错，还有时候可能找不到```react-native run-ios```的时候也报不到具体的错，用以上代码生成一下`main.jsbundle`有写错就能报出具体位置</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## Redefinition of RCTMethodInfo</span><br><span class="line">这个报错一般是因为,依赖库出问题，使用xcode运行，找到具提文件，需要修改</span><br></pre></td></tr></table></figure></li>
 </ul>
-<p>#import “RCTBridgeModule.h”  —&gt;   #import &lt;React/RCTBridgeModule.h&gt;</p>
-<p>#import “RCTBridge.h”   —&gt;  #import &lt;React/RCTBridge.h&gt;<br><code>`</code></p>
+<p>#import “RCTBridgeModule.h”  —&gt;</p>
+<p>#import &lt;React/RCTBridgeModule.h&gt;</p>
+<p>#import “RCTBridge.h”   —&gt; </p>
+<p>#import &lt;React/RCTBridge.h&gt;</p>
+<p><code>`</code></p>
 
       
 
@@ -349,7 +352,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ios</a>
+                <a href="javascript:void(0)" class="js-tag color3">RN</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -357,7 +360,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RN</a>
+                <a href="javascript:void(0)" class="js-tag color4">ios</a>
               </li>
              
               <li class="article-tag-list-item">
