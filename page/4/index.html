@@ -145,6 +145,81 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-redux" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/01/redux/">redux</a>
+    </h1>
+  
+
+        
+        <a href="/2018/09/01/redux/" class="archive-article-date">
+  	<time datetime="2018-09-01T15:38:15.515Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="store"><a href="#store" class="headerlink" title="store"></a>store</h2><h2 id="reducer"><a href="#reducer" class="headerlink" title="reducer"></a>reducer</h2><p>改变dom</p>
+<h2 id="actions"><a href="#actions" class="headerlink" title="actions"></a>actions</h2><p>在初始化时，createStore会主动触发一次dispach，它的action.type是系统内置的INIT，所以在reducer中不会匹配到任何开发者自定义的action.type，它走的是switch中default的逻辑，目的是为了得到初始化的状态。<br>当然我们也可以手动指定initialState，笔者在这里做了一层判断，当initialState没有定义时，我们才会dispatch，而在源码中是都会执行一次dispatch，笔者认为没有必要，这是一次多余的操作。因为这个时候，监听流中没有注册函数，走了一遍reducer中的default逻辑，得到新的state和initialState是一样的。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">RN</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/01/redux/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
     <article id="post-Cocoapods" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -863,85 +938,6 @@
 
   
   
-    <article id="post-codePush" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/19/codePush/">CodePush 命令行</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/19/codePush/" class="archive-article-date">
-  	<time datetime="2018-08-19T12:12:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li><a href="https://github.com/Microsoft/code-push/blob/master/cli/README-cn.md" target="_blank" rel="noopener">原文地址</a></li>
-</ul>
-<h1 id="CodePush-命令行"><a href="#CodePush-命令行" class="headerlink" title="CodePush 命令行"></a>CodePush 命令行</h1><h4 id="Note-This-translated-document-is-community-contributed-and-maintained-it-will-not-be-kept-updated-or-in-sync-with-the-original-by-the-main-contributors-Please-send-a-pull-request-if-you-find-any-issues"><a href="#Note-This-translated-document-is-community-contributed-and-maintained-it-will-not-be-kept-updated-or-in-sync-with-the-original-by-the-main-contributors-Please-send-a-pull-request-if-you-find-any-issues" class="headerlink" title="Note: This translated document is community contributed and maintained, it will not be kept updated or in sync with the original by the main contributors. Please send a pull request if you find any issues."></a>Note: This translated document is community contributed and maintained, it will not be kept updated or in sync with the <a href="./README.md">original</a> by the main contributors. Please send a pull request if you find any issues.</h4><h4 id="注：本翻译文档是由社区贡献和维护，不受原文的作者持续维护并更新。如果您发现任何问题，请发送pull请求。"><a href="#注：本翻译文档是由社区贡献和维护，不受原文的作者持续维护并更新。如果您发现任何问题，请发送pull请求。" class="headerlink" title="注：本翻译文档是由社区贡献和维护，不受原文的作者持续维护并更新。如果您发现任何问题，请发送pull请求。"></a>注：本翻译文档是由社区贡献和维护，不受<a href="./README.md">原文</a>的作者持续维护并更新。如果您发现任何问题，请发送pull请求。</h4>
-        
-          <a class="article-more-a" href="/2018/08/19/codePush/#more">More >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">RN</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/19/codePush/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
@@ -1033,15 +1029,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RN</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ios</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">开发</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RN</a>
               </li>
              
               <li class="article-tag-list-item">

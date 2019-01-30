@@ -145,6 +145,86 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-iOS报错整理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/12/06/iOS报错整理/">iOS报错整理</a>
+    </h1>
+  
+
+        
+        <a href="/2018/12/06/iOS报错整理/" class="archive-article-date">
+  	<time datetime="2018-12-06T02:15:55.990Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="main-jsbundle-does-not-exist-This-must-be-a-bug-with-echo-‘React-Native"><a href="#main-jsbundle-does-not-exist-This-must-be-a-bug-with-echo-‘React-Native" class="headerlink" title="main.jsbundle does not exist. This must be a bug with + echo ‘React Native"></a>main.jsbundle does not exist. This must be a bug with + echo ‘React Native</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">react-native bundle --entry-file ./index.ios.js --platform ios --bundle-output ios/main.jsbundle</span><br></pre></td></tr></table></figure>
+<ul>
+<li>有时候用xcode打包会报</li>
+</ul>
+<figure class="highlight plain"><figcaption><span>does not exist. This must be a bug with + echo 'React Native```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">错，还有时候可能找不到</span><br><span class="line">```react-native run-ios</span><br></pre></td></tr></table></figure>
+<p>的时候也报不到具体的错，用以上代码生成一下<code>main.jsbundle</code>有写错就能报出具体位置</p>
+<h2 id="Redefinition-of-RCTMethodInfo"><a href="#Redefinition-of-RCTMethodInfo" class="headerlink" title="Redefinition of RCTMethodInfo"></a>Redefinition of RCTMethodInfo</h2><p>这个报错一般是因为,依赖库出问题，使用xcode运行，找到具提文件，需要修改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#import &quot;RCTBridgeModule.h&quot;  ---&gt;</span><br><span class="line">#import &lt;React/RCTBridgeModule.h&gt;</span><br><span class="line">#import &quot;RCTBridge.h&quot;   ---&gt; </span><br><span class="line">#import &lt;React/RCTBridge.h&gt;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">RN</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/12/06/iOS报错整理/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
     <article id="post-Git忽略文件.gitignore的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -886,90 +966,6 @@
 
   
   
-    <article id="post-iOS 模拟网络环境测试的方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/31/iOS 模拟网络环境测试的方法/">iOS 模拟网络环境测试</a>
-    </h1>
-  
-
-        
-        <a href="/2018/10/31/iOS 模拟网络环境测试的方法/" class="archive-article-date">
-  	<time datetime="2018-10-31T05:55:37.682Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Network-Link-Conditioner"><a href="#Network-Link-Conditioner" class="headerlink" title="Network Link Conditioner"></a>Network Link Conditioner</h2><p><a href="https://nshipster.com/network-link-conditioner/" target="_blank" rel="noopener">介绍</a></p>
-<ul>
-<li>安装 </li>
-</ul>
-<p>去<a href="https://developer.apple.com/download/more/" target="_blank" rel="noopener">Apple Developer Downloads</a>搜索<code>Hardware IO Tools for Xcode</code>,下载最新的就行<br>，安装后，在系统偏好设置的最下边，就能看到了，打开即可</p>
-<ul>
-<li>参数说明</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">EDGE（2G）</span><br><span class="line">3G</span><br><span class="line">DSL（电话线上网）</span><br><span class="line">WiFi</span><br><span class="line">High Latency DNS（高延迟）</span><br><span class="line">Very Bad Network（网络状况不稳定）</span><br><span class="line">100% Loss（全丢包）</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2018/10/31/iOS 模拟网络环境测试的方法/#more">More >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">mac</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/10/31/iOS 模拟网络环境测试的方法/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
@@ -1061,15 +1057,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RN</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ios</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">开发</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RN</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -145,6 +145,84 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-申请美区账号" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/30/申请美区账号/">申请美区apple id</a>
+    </h1>
+  
+
+        
+        <a href="/2019/01/30/申请美区账号/" class="archive-article-date">
+  	<time datetime="2019-01-30T03:46:19.825Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>注册美区账号，正常注册，需要你有visa卡或者paypal之类的绑定。还有啊，如果你是美区账号，就不要转国区了，转进来好转，转出去就坑了。还有一个问题，我也没弄明白，美区转国区后，之前在美区的付费app怎么处理了…</p>
+<h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><ul>
+<li>在 <a href="">https://appleid.apple.com/account/manage/</a> 注册（地区选择美国）<br>注意: 注册过程中，拍个照记住验证问题和答案</li></ul>
+        
+          <a class="article-more-a" href="/2019/01/30/申请美区账号/#more">More >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">mac</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/01/30/申请美区账号/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
     <article id="post-android原生学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -872,86 +950,6 @@
 
   
   
-    <article id="post-iOS报错整理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/06/iOS报错整理/">iOS报错整理</a>
-    </h1>
-  
-
-        
-        <a href="/2018/12/06/iOS报错整理/" class="archive-article-date">
-  	<time datetime="2018-12-06T02:15:55.990Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="main-jsbundle-does-not-exist-This-must-be-a-bug-with-echo-‘React-Native"><a href="#main-jsbundle-does-not-exist-This-must-be-a-bug-with-echo-‘React-Native" class="headerlink" title="main.jsbundle does not exist. This must be a bug with + echo ‘React Native"></a>main.jsbundle does not exist. This must be a bug with + echo ‘React Native</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">react-native bundle --entry-file ./index.ios.js --platform ios --bundle-output ios/main.jsbundle</span><br></pre></td></tr></table></figure>
-<ul>
-<li>有时候用xcode打包会报</li>
-</ul>
-<figure class="highlight plain"><figcaption><span>does not exist. This must be a bug with + echo 'React Native```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">错，还有时候可能找不到</span><br><span class="line">```react-native run-ios</span><br></pre></td></tr></table></figure>
-<p>的时候也报不到具体的错，用以上代码生成一下<code>main.jsbundle</code>有写错就能报出具体位置</p>
-<h2 id="Redefinition-of-RCTMethodInfo"><a href="#Redefinition-of-RCTMethodInfo" class="headerlink" title="Redefinition of RCTMethodInfo"></a>Redefinition of RCTMethodInfo</h2><p>这个报错一般是因为,依赖库出问题，使用xcode运行，找到具提文件，需要修改</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#import &quot;RCTBridgeModule.h&quot;  ---&gt;</span><br><span class="line">#import &lt;React/RCTBridgeModule.h&gt;</span><br><span class="line">#import &quot;RCTBridge.h&quot;   ---&gt; </span><br><span class="line">#import &lt;React/RCTBridge.h&gt;</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">RN</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/12/06/iOS报错整理/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1043,15 +1041,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RN</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ios</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">开发</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RN</a>
               </li>
              
               <li class="article-tag-list-item">
