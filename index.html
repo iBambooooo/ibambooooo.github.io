@@ -145,6 +145,99 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-MacOS 的 zsh 和 bash切换" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/27/MacOS 的 zsh 和 bash切换/">MacOS 的 zsh 和 bash切换</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/27/MacOS 的 zsh 和 bash切换/" class="archive-article-date">
+  	<time datetime="2019-09-27T07:17:51.070Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="使用oh-my-zsh"><a href="#使用oh-my-zsh" class="headerlink" title="使用oh-my-zsh"></a>使用oh-my-zsh</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh</span><br></pre></td></tr></table></figure>
+<ul>
+<li>备份已存在的~/.zshrc文件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp ~/.zshrc ~/.zshrc.orig</span><br></pre></td></tr></table></figure>
+<ul>
+<li>新建一份新的zsh配置文件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc</span><br></pre></td></tr></table></figure>
+<ul>
+<li>切换shell</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chsh -s /bin/zsh</span><br></pre></td></tr></table></figure>
+<h2 id="切换回bash"><a href="#切换回bash" class="headerlink" title="切换回bash"></a>切换回bash</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chsh -s /bin/bash</span><br></pre></td></tr></table></figure>
+<p>重启终端</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul>
+<li>bash 的环境变量是.bash_profile文件。</li>
+<li>zsh 的环境变量是.zshrc文件</li>
+<li>如果从 bash 切换到 zsh，但想保留 bash 所设置的环境变量，可在 .zshrc文件末尾添加 source ~/.bash_profile 保存退出，并重启终端即可使用 bash 的环境变量。</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">环境</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/27/MacOS 的 zsh 和 bash切换/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
     <article id="post-linux基础" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -885,91 +978,6 @@
 
   
   
-    <article id="post-react-native常用组件使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/17/react-native常用组件使用/">eact-native常用组件使用</a>
-    </h1>
-  
-
-        
-        <a href="/2019/01/17/react-native常用组件使用/" class="archive-article-date">
-  	<time datetime="2019-01-17T06:12:32.367Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="react-native-router-flux"><a href="#react-native-router-flux" class="headerlink" title="react-native-router-flux"></a>react-native-router-flux</h2><ul>
-<li><p>隐藏tabbar</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Actions.refresh (&#123;hideTabBar: true&#125;)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>待研究的</p>
-</li>
-</ul>
-<p>每一个页面由一个key标识，但是，同一个页面push自身，哪pop回退到指定的层级，怎么处理？</p>
-<h2 id="react-native-zss-rich-text-editor"><a href="#react-native-zss-rich-text-editor" class="headerlink" title="react-native-zss-rich-text-editor"></a>react-native-zss-rich-text-editor</h2><ul>
-<li>隐藏滚动条<br>通过设置customCSS这个</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;RichTextEditor</span><br><span class="line"> ref=&#123;(e) =&gt; this.richText = e&#125;</span><br><span class="line"> style=&#123;[styles.richText, &#123;height: this.state.editorHeight&#125;]&#125;</span><br><span class="line"> minHeight=&#123;350&#125;</span><br><span class="line"> enableOnChange=&#123;true&#125;</span><br><span class="line"> hiddenTitle=&#123;true&#125;</span><br><span class="line">contentInset=&#123;&#123; bottom: 500 &#125;&#125;</span><br><span class="line">customCSS = &#123;&apos;#zss_editor_content &#123; padding-left: 0; padding-right: 0; &#125;&apos;&#125;</span><br><span class="line">initialContentHTML=&#123;this.html() || &apos;&apos;&#125;</span><br><span class="line">contentPlaceholder=&quot;请输入正文&quot;</span><br><span class="line">editorInitializedCallback=&#123;() =&gt; &#123;</span><br><span class="line"></span><br><span class="line">&#125;&#125;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">RN</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/01/17/react-native常用组件使用/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1069,11 +1077,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">开发</a>
+                <a href="javascript:void(0)" class="js-tag color3">环境</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">环境</a>
+                <a href="javascript:void(0)" class="js-tag color3">开发</a>
               </li>
              
               <li class="article-tag-list-item">

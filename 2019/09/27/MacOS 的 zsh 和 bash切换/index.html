@@ -6,22 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>android报错整理 | ibamboo</title>
+  <title>MacOS 的 zsh 和 bash切换 | ibamboo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="react-native-http-cache 引起的报错123456789101112Users/xxx.../node_modules/react-native-http-cache/android/src/main/java/cn/reactnative/httpcache/HttpCacheModule.java:69: 错误: 找不到符号FileCache cache1 = ImageP">
-<meta name="keywords" content="RN">
+  <meta name="description" content="使用oh-my-zsh1git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh  备份已存在的~/.zshrc文件  1cp ~/.zshrc ~/.zshrc.orig  新建一份新的zsh配置文件  1cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc  切">
+<meta name="keywords" content="环境">
 <meta property="og:type" content="article">
-<meta property="og:title" content="android报错整理">
-<meta property="og:url" content="http://yoursite.com/2019/01/07/android报错整理/index.html">
+<meta property="og:title" content="MacOS 的 zsh 和 bash切换">
+<meta property="og:url" content="http://yoursite.com/2019/09/27/MacOS 的 zsh 和 bash切换/index.html">
 <meta property="og:site_name" content="ibamboo">
-<meta property="og:description" content="react-native-http-cache 引起的报错123456789101112Users/xxx.../node_modules/react-native-http-cache/android/src/main/java/cn/reactnative/httpcache/HttpCacheModule.java:69: 错误: 找不到符号FileCache cache1 = ImageP">
+<meta property="og:description" content="使用oh-my-zsh1git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh  备份已存在的~/.zshrc文件  1cp ~/.zshrc ~/.zshrc.orig  新建一份新的zsh配置文件  1cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc  切">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/2019/01/07/android报错整理/001.png">
-<meta property="og:updated_time" content="2019-01-15T03:11:20.369Z">
+<meta property="og:updated_time" content="2019-09-27T07:21:18.241Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="android报错整理">
-<meta name="twitter:description" content="react-native-http-cache 引起的报错123456789101112Users/xxx.../node_modules/react-native-http-cache/android/src/main/java/cn/reactnative/httpcache/HttpCacheModule.java:69: 错误: 找不到符号FileCache cache1 = ImageP">
-<meta name="twitter:image" content="http://yoursite.com/2019/01/07/android报错整理/001.png">
+<meta name="twitter:title" content="MacOS 的 zsh 和 bash切换">
+<meta name="twitter:description" content="使用oh-my-zsh1git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh  备份已存在的~/.zshrc文件  1cp ~/.zshrc ~/.zshrc.orig  新建一份新的zsh配置文件  1cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc  切">
   
   
     <link rel="icon" href="/assets/image/developer.png">
@@ -147,42 +145,47 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-android报错整理" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-MacOS 的 zsh 和 bash切换" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      android报错整理
+      MacOS 的 zsh 和 bash切换
     </h1>
   
 
         
-        <a href="/2019/01/07/android报错整理/" class="archive-article-date">
-  	<time datetime="2019-01-07T08:02:59.370Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-07</time>
+        <a href="/2019/09/27/MacOS 的 zsh 和 bash切换/" class="archive-article-date">
+  	<time datetime="2019-09-27T07:17:51.070Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="react-native-http-cache-引起的报错"><a href="#react-native-http-cache-引起的报错" class="headerlink" title="react-native-http-cache 引起的报错"></a>react-native-http-cache 引起的报错</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Users/xxx.../node_modules/react-native-http-cache/android/src/main/java/cn/reactnative/httpcache/HttpCacheModule.java:69: 错误: 找不到符号</span><br><span class="line">FileCache cache1 = ImagePipelineFactory.getInstance().getMainDiskStorageCache();</span><br><span class="line">^</span><br><span class="line">符号: 方法 getMainDiskStorageCache()</span><br><span class="line">位置: 类 ImagePipelineFactory</span><br><span class="line">/Users/xxx.../node_modules/react-native-http-cache/android/src/main/java/cn/reactnative/httpcache/HttpCacheModule.java:80: 错误: 找不到符号</span><br><span class="line">FileCache cache2 = ImagePipelineFactory.getInstance().getSmallImageDiskStorageCache();</span><br><span class="line">^</span><br><span class="line">符号: 方法 getSmallImageDiskStorageCache()</span><br><span class="line">位置: 类 ImagePipelineFactory</span><br><span class="line">2 个错误</span><br><span class="line">:react-native-http-cache:compileReleaseJavaWithJavac FAILED</span><br></pre></td></tr></table></figure>
+        <h2 id="使用oh-my-zsh"><a href="#使用oh-my-zsh" class="headerlink" title="使用oh-my-zsh"></a>使用oh-my-zsh</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh</span><br></pre></td></tr></table></figure>
 <ul>
-<li>解决方法</li>
+<li>备份已存在的~/.zshrc文件</li>
 </ul>
-<p><img src="/2019/01/07/android报错整理/001.png" alt=""><br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">【L69】FileCache cache1 = ImagePipelineFactory.getInstance().getMainFileCache();</span><br><span class="line">【L80】FileCache cache2 = ImagePipelineFactory.getInstance().getSmallImageFileCache();</span><br></pre></td></tr></table></figure></p>
-<h2 id="Android-ABIFilter-Device-supports-x86-but-APK-only-supports-armeabi-v7a-armeabi-x86-64"><a href="#Android-ABIFilter-Device-supports-x86-but-APK-only-supports-armeabi-v7a-armeabi-x86-64" class="headerlink" title="Android-ABIFilter-Device supports x86,but APK only supports armeabi-v7a,armeabi,x86_64"></a>Android-ABIFilter-Device supports x86,but APK only supports armeabi-v7a,armeabi,x86_64</h2><ul>
-<li>Android 支持的 CPU 架构有有以下几种：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">armeabi 第5代 ARM v5TE，使用软件浮点运算，兼容所有ARM设备，通用性强，速度慢</span><br><span class="line">armeabi-v7a	  第7代 ARM v7，使用硬件浮点运算，具有高级扩展功能</span><br><span class="line">arm64-v8a	 第8代，64位，包含AArch32、AArch64两个执行状态对应32、64bit</span><br><span class="line">x86 intel 32位，一般用于平板</span><br><span class="line">x86_64  intel 64位，一般用于平板</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp ~/.zshrc ~/.zshrc.orig</span><br></pre></td></tr></table></figure>
 <ul>
-<li>设置apk对支持的cpu架构</li>
+<li>新建一份新的zsh配置文件</li>
 </ul>
-<p>修改app下的build.gradle (如果使用as打开的，在Gradlde Scripts/budild.gradle(muoudle:app))</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ndk &#123;</span><br><span class="line">            abiFilters &quot;armeabi-v7a&quot;, &quot;x86&quot;,&quot;armeabi&quot;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h2 id="Error-resource-android-style-TextAppearance-Material-Widget-Button-Borderless-Colored-not-found"><a href="#Error-resource-android-style-TextAppearance-Material-Widget-Button-Borderless-Colored-not-found" class="headerlink" title="Error:resource android:style/TextAppearance.Material.Widget.Button.Borderless.Colored not found"></a>Error:resource android:style/TextAppearance.Material.Widget.Button.Borderless.Colored not found</h2><p>有时候构建Android studio项目，会莫名出现Error:resource android:style/TextAppearance.Material.Widget.Button.Borderless.Colored not found的问题，并且还会引起一系列其他的问题。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">修改方法：将compileSdkVersion修改成25，并将对应的buildToolsVersion修改成25.0.2即可</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc</span><br></pre></td></tr></table></figure>
+<ul>
+<li>切换shell</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chsh -s /bin/zsh</span><br></pre></td></tr></table></figure>
+<h2 id="切换回bash"><a href="#切换回bash" class="headerlink" title="切换回bash"></a>切换回bash</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chsh -s /bin/bash</span><br></pre></td></tr></table></figure>
+<p>重启终端</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul>
+<li>bash 的环境变量是.bash_profile文件。</li>
+<li>zsh 的环境变量是.zshrc文件</li>
+<li>如果从 bash 切换到 zsh，但想保留 bash 所设置的环境变量，可在 .zshrc文件末尾添加 source ~/.bash_profile 保存退出，并重启终端即可使用 bash 的环境变量。</li>
+</ul>
+
       
 
       
@@ -195,7 +198,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">RN</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">环境</a>
         		</li>
       		
 		</ul>
@@ -214,18 +217,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/01/15/RN错误记录/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          RN错误记录
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/12/21/redhot搭建sftp/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">搭建sftp服务器</div>
+    <a href="/2019/08/28/linux基础/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">linux基础</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -265,7 +259,7 @@ if(true){
   	repo: 'ibambooooo.github.io',
   	owner: 'ibambooooo',
   	admin: ['ibambooooo'],
-  	 id: 'Mon Jan 07 2019 16:02:59 GMT+0800', //页面的唯一标识。长度必须小于50
+  	 id: 'Fri Sep 27 2019 15:17:51 GMT+0800', //页面的唯一标识。长度必须小于50
     //id: window.location.pathname,
      //类似Facebook评论框的全屏遮罩效果.
   	distractionFreeMode: false
