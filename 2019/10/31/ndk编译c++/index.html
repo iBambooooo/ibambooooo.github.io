@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 环境 | ibamboo</title>
+  <title>NDK编译c++ | ibamboo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="划船不用桨，一生全靠浪">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ibamboo">
-<meta property="og:url" content="http://yoursite.com/tags/环境/page/2/index.html">
+  <meta name="description" content="[toc] NDK独立链接库NDK各版本下载 解压后，在加压目录1- shell脚本  xx/android-ndk-r13b/build/tools/make_standalone_toolchain.sh –platform=android-21 –toolchain=aarch64-linux-android-4.9 –arch=arm64  –stl=stlport –install-di">
+<meta name="keywords" content="android">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NDK编译c++">
+<meta property="og:url" content="http://yoursite.com/2019/10/31/ndk编译c++/index.html">
 <meta property="og:site_name" content="ibamboo">
-<meta property="og:description" content="划船不用桨，一生全靠浪">
+<meta property="og:description" content="[toc] NDK独立链接库NDK各版本下载 解压后，在加压目录1- shell脚本  xx/android-ndk-r13b/build/tools/make_standalone_toolchain.sh –platform=android-21 –toolchain=aarch64-linux-android-4.9 –arch=arm64  –stl=stlport –install-di">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-12-12T08:38:05.620Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ibamboo">
-<meta name="twitter:description" content="划船不用桨，一生全靠浪">
+<meta name="twitter:title" content="NDK编译c++">
+<meta name="twitter:description" content="[toc] NDK独立链接库NDK各版本下载 解压后，在加压目录1- shell脚本  xx/android-ndk-r13b/build/tools/make_standalone_toolchain.sh –platform=android-21 –toolchain=aarch64-linux-android-4.9 –arch=arm64  –stl=stlport –install-di">
   
   
     <link rel="icon" href="/assets/image/developer.png">
@@ -143,256 +145,216 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-ndk编译c++" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      NDK编译c++
+    </h1>
+  
+
+        
+        <a href="/2019/10/31/ndk编译c++/" class="archive-article-date">
+  	<time datetime="2019-10-31T06:06:43.813Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-31</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>[toc]</p>
+<h2 id="NDK独立链接库"><a href="#NDK独立链接库" class="headerlink" title="NDK独立链接库"></a>NDK独立链接库</h2><p><a href="https://blog.csdn.net/gyh198/article/details/75036686" target="_blank" rel="noopener">NDK各版本下载</a></p>
+<p>解压后，在加压目录<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- shell脚本</span><br></pre></td></tr></table></figure></p>
+<p> xx/android-ndk-r13b/build/tools/make_standalone_toolchain.sh –platform=android-21 –toolchain=aarch64-linux-android-4.9 –arch=arm64  –stl=stlport –install-dir=/Users/30san/Downloads/ndk_toolc/Users/30san/Downloads/ndk_toolchain_r13_arm64<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-py 脚本</span><br></pre></td></tr></table></figure></p>
+<p>/Users/30san/Downloads/android-ndk-r13b/build/tools/make_standalone_toolchain.py  –arch arm64 –api 21 –stl=stlport –install-dir=/Users/30san/Downloads/ndk_toolchain_a64<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">参数说明：</span><br><span class="line">* --arch 指的是要编译的版本 cpu指令版本</span><br><span class="line">* api 指的是android 对应的api版本 api21是支持64位的最低版本</span><br><span class="line">* install-dir 指的是生成独立链接库的路径(不需要创建文件夹，脚本会自己生成)</span><br><span class="line"></span><br><span class="line">## make 环境变量</span><br><span class="line">https://www.gnu.org/software/make/manual/html</span><br><span class="line">_node/Implicit-Variables.html</span><br><span class="line">常用参数说明</span><br></pre></td></tr></table></figure></p>
+<p>CFLAGS：表示用于 C 编译器的选项<br>如指定头文件（.h文件）的路径，如：CFLAGS=-I/usr/include -I/path/include。同样地，安装一个包时会在安装路径下建立一个include目录，当安装过程中出现问题时，试着把以前安装的包的include目录加入到该变量中来</p>
+<p>CXXFLAGS：表示用于 C++ 编译器的选项</p>
+<p>LDFLAGS：gcc 等编译器会用到的一些链接参数，也可以在里面指定库文件的位置。用法：LDFLAGS=-L/usr/lib -L/path/to/your/lib。每安装一个包都几乎一定的会在安装目录里建立一个lib目录。如果明明安装了某个包，而安装另一个包时，它却是说找不到，可以将那个包的lib路径加入的LDFALGS中试一下。</p>
+<p>LIBS：告诉链接器要链接哪些库文件，如LIBS = -lpthread -liconv -llibz -llog</p>
+<p>LDFLAGS是告诉链接器从哪里寻找库文件，而<br>LIBS是告诉链接器要链接哪些库文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## NDK 常用变量</span><br><span class="line">在根目录新建```params.make```,定义makefile常量</span><br></pre></td></tr></table></figure>
+<h1 id="params-make-文件"><a href="#params-make-文件" class="headerlink" title="params.make 文件"></a>params.make 文件</h1><p>SO_VER=1.0.1<br>SO_NAME_VER=1.0</p>
+<p>CPPFLAGS=<br>LIBS=</p>
+<p>#r13 arm64 这里是ndk独立链接库地址<br>BASE_PATH = /Users/30san/Downloads/ndk_toolchain_r13_arm64/bin/</p>
+<h1 id="ndk-r10-arm64"><a href="#ndk-r10-arm64" class="headerlink" title="ndk r10 arm64"></a>ndk r10 arm64</h1><h1 id="BASE-PATH-Users-30san-Downloads-ndk-toolc-ndk-toolchain-r10-arm64-bin"><a href="#BASE-PATH-Users-30san-Downloads-ndk-toolc-ndk-toolchain-r10-arm64-bin" class="headerlink" title="BASE_PATH = /Users/30san/Downloads/ndk_toolc/ndk_toolchain_r10_arm64/bin/"></a>BASE_PATH = /Users/30san/Downloads/ndk_toolc/ndk_toolchain_r10_arm64/bin/</h1><p>#ndk r20 arm64</p>
+<h1 id="BASE-PATH-Users-30san-Downloads-ndk-toolchain-arm64-bin"><a href="#BASE-PATH-Users-30san-Downloads-ndk-toolchain-arm64-bin" class="headerlink" title="BASE_PATH = /Users/30san/Downloads/ndk_toolchain_arm64/bin/"></a>BASE_PATH = /Users/30san/Downloads/ndk_toolchain_arm64/bin/</h1><p>ARCH_FLAGS = –no-undefined<br>ARCH_LINK = </p>
+<p>ANDROID_CC = $(BASE_PATH)/aarch64-linux-android-gcc<br>ANDROID_CXX = $(BASE_PATH)/aarch64-linux-android-g++</p>
+<p>CFLAGS += -fpic -ffunction-sections -funwind-tables -fstack-protector -fno-strict-aliasing</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- armeabi</span><br></pre></td></tr></table></figure>
+<h1 id="独立工具链–arm参数参开这里"><a href="#独立工具链–arm参数参开这里" class="headerlink" title="独立工具链–arm参数参开这里"></a>独立工具链–arm参数参开这里</h1><p>$ANDROID_NDK/build/tools/make-standalone-toolchain.sh –arch=arm –install-dir=./toolchain</p>
+<p>TOOL=arm-linux-androideabi<br>ARCH_FLAGS=”-mthumb”<br>ARCH_LINK=<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- armeabi-v7a</span><br></pre></td></tr></table></figure></p>
+<p>$ANDROID_NDK/build/tools/make-standalone-toolchain.sh –arch=arm –install-dir=./toolchain<br>TOOL=arm-linux-androideabi<br>ARCH_FLAGS=”-march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16”<br>export ARCH_LINK=”-march=armv7-a -Wl,–fix-cortex-a8”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- arm64-v8a</span><br></pre></td></tr></table></figure></p>
+<p>$ANDROID_NDK/build/tools/make-standalone-toolchain.sh –arch=arm64 –install-dir=./toolchain<br>TOOL=aarch64-linux-android<br>ARCH_FLAGS=<br>ARCH_LINK=</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- x86</span><br></pre></td></tr></table></figure>
+<p>$ANDROID_NDK/build/tools/make-standalone-toolchain.sh –arch=x86 –install-dir=./toolchain<br>TOOL=i686-linux-android<br>ARCH_FLAGS=”-march=i686 -msse3 -mstackrealign -mfpmath=sse”<br>ARCH_LINK=<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- x86_64</span><br></pre></td></tr></table></figure></p>
+<p>$ANDROID_NDK/build/tools/make-standalone-toolchain.sh –arch=x86_64 –install-dir=./toolchain<br>TOOL=”x86_64-linux-android”<br>ARCH_FLAGS=”-march=x86-64 -msse4.2 -mpopcnt -m64 -mtune=intel”<br>ARCH_LINK=””<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- mips</span><br></pre></td></tr></table></figure></p>
+<p>$ANDROID_NDK/build/tools/make-standalone-toolchain.sh –arch=mips –install-dir=./toolchain<br>TOOL=mipsel-linux-android<br>ARCH_FLAGS=<br>ARCH_LINK=<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- mips64</span><br></pre></td></tr></table></figure></p>
+<p>$ANDROID_NDK/build/tools/make-standalone-toolchain.sh –arch=mips64 –install-dir=./toolchain<br>export TOOL=mips64el-linux-android<br>export ARCH_FLAGS=<br>export ARCH_LINK=<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[NDK 交叉编译常用变量] (https://fucknmb.com/2017/06/22/NDK%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%B8%B8%E7%94%A8%E5%8F%98%E9%87%8F/)</span><br><span class="line"></span><br><span class="line">## make 脚本</span><br></pre></td></tr></table></figure></p>
+<p>#written by Frank,westone Inc.<br>include ../params.make  #这个指的就是定义make常量的文件</p>
+<p>PROJ = SOF_Interface</p>
+<p>CXXFLAGS += -Wall -D_REENTRANT -MMD -I./</p>
+<p>LIBS += -L../lib/Linux -L../lib_third/Linux  -lSOFApiWithHandle -lwcmUtil  # 依赖的本地库，不需要带lib和后缀so，只需要-l+库名<br>CXXFLAGS += -I../include/SOF -I../include/mwUtil  # 依赖的头文件名</p>
+<h1 id="CC-g"><a href="#CC-g" class="headerlink" title="CC = g++"></a>CC = g++</h1><p>CC = $(ANDROID_CC)<br>CXX = $(ANDROID_CXX)</p>
+<p>CXXFLAGS += ${CFLAGS} -frtti -fexceptions</p>
+<p>LDFLAGS += ${ARCH_LINK}</p>
+<p>ARFLAGS = </p>
+<p>LOCAL_LDFLAGS += -fuse-ld=bfd</p>
+<p>SOURCES = $(wildcard <em>.c </em>.cpp)</p>
+<p>OBJS = $(patsubst %.c,%.o,$(patsubst %.cpp,%.o,$(SOURCES)))</p>
+<p>DEPS = $(patsubst %.o,%.d,$(OBJS))</p>
+<p>MISS_DEPS = $(filter-out $(wildcard $(DEPS)), $(DEPS))</p>
+<p>$(PROJ):$(MISS_DEPS) $(OBJS)</p>
+<h1 id="需要链接的命令在这里补充"><a href="#需要链接的命令在这里补充" class="headerlink" title="需要链接的命令在这里补充"></a>需要链接的命令在这里补充</h1><pre><code>$(CXX)  -fPIC -fexceptions -shared  -o ../lib/linux/lib$@.so.$(SO_VER) $(OBJS) $(LIBS) 
+-ln -s lib$@.so.$(SO_VER) ../lib/linux/lib$@.so  &amp;&amp; \
+cp -f ./com_westone_wvcm_jni_SOFInterface.h ../include/SOF
+</code></pre><p>clean:<br>    rm -f <em>.o </em>.d lib$(PROJ).so core ../lib/Linux/lib$(PROJ).so*</p>
+<p>$(MISS_DEPS):<br>    rm -f $(patsubst %.d,%.o,$@)</p>
+<p>-include $(DEPS)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">## 查看cpu</span><br></pre></td></tr></table></figure>
+<p>adb shell<br>cd proc<br>cat cpuinfo<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 查看生成so库的函数</span><br></pre></td></tr></table></figure></p>
+<p>nm -D xx.so<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## makefile中常见的错误—missing separator. Stop.—原因命令行缺少tab键</span><br></pre></td></tr></table></figure></p>
+<p>删除原来的空格  输入tab<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## openssl编译</span><br><span class="line"></span><br><span class="line">这个是wst改过的源码，目前编译成功需要注释两个文件，目前不知道有啥后遗症</span><br></pre></td></tr></table></figure></p>
+<p>crypto/evp/c_all.c<br>crypto/evp/evp_acnf.c</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 出现 ```requires unsupported dynamic reloc R_ARM_REL32; recompile with -fPIC ``` 报错</span><br><span class="line">在anriod.mk添加</span><br></pre></td></tr></table></figure>
+<p>LOCAL_LDFLAGS := -Wl,-Bsymbolic<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">https://www.jianshu.com/p/1b60337991f9</span><br><span class="line"></span><br><span class="line">- 编译脚本</span><br></pre></td></tr></table></figure></p>
+<p>ndk-build NDK_PROJECT_PATH=../ APP_BUILD_SCRIPT=../Android.mk<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- NDK_PROJECT_PATH 参数 在shell脚本指定项目根目录路径</span><br><span class="line">不存在的.h文件移动到includ目录</span><br><span class="line"></span><br><span class="line">- crypto 模块32位会报错 </span><br><span class="line">注释了```bn/asm/armv4-mont.S \ ``` 这个汇编文件</span><br></pre></td></tr></table></figure></p>
+<p>arm_src_files := \<br>    aes/asm/aes-armv4.S \<br>    bn/asm/armv4-mont.S \<br>    sha/asm/sha1-armv4-large.S \<br>    sha/asm/sha256-armv4.S \<br>    sha/asm/sha512-armv4.S<br>non_arm_src_files := aes/aes_core.c<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- crypto 编译静态库.a</span><br></pre></td></tr></table></figure></p>
+<p>include $(BUILD_STATIC_LIBRARY)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## java 生成jni 头文件</span><br><span class="line"></span><br><span class="line">- 生成class 文件</span><br></pre></td></tr></table></figure></p>
+<p>//在终端<br>javac  /Users/30san/Desktop/SOFInterface/app/src/main/java/com/westone/wvcm/jni/SOFInterface.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 生成jni的c头文件</span><br></pre></td></tr></table></figure></p>
+<p>javah -classpath /Users/30san/Desktop/SOFInterface/app/src/main/java  -d jh com.westone.wvcm.jni.SOFInterface<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">* 1. -classpath 该工程目录下包含com.xx.xx 包名的目录</span><br><span class="line">* -d 头文件的输出文件夹名称（该文件出现在命令中设定的·classpath路径下）如上面的：jh</span><br><span class="line"> 执行上面的命令后生成头文件所在路径：/Users/30san/Desktop/SOFInterface/app/src/main/java/com/westone/wvcm/jni/jh/</span><br><span class="line">* class类的全部包名</span><br><span class="line"> com.westone.wvcm.jni.SOFInterface</span><br><span class="line"> </span><br><span class="line"> 将头文件拷贝到jni所在的cpp目录，在cpp中includ头文件</span><br><span class="line"> </span><br><span class="line"> ## android 打包arr </span><br><span class="line">android studio 右边的gradle-&gt;模块名-&gt;build-&gt; assemble </span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">[Jni打包及引用aar</span><br><span class="line">](https://www.jianshu.com/p/fbbad39a9b57)</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> ## android 打包jar</span><br><span class="line"> </span><br><span class="line">- 在android项目 ```file-&gt;new-&gt;new moudle```新建一个module，包名必须跟之前生成so库里方法名的包名一致</span><br><span class="line">- so放置到libs下</span><br><span class="line">- 在module下的gradle文件中配置打包任务（文件最后边补,在&#125;外）</span><br></pre></td></tr></table></figure></p>
+<p>task makeJar(type: Copy) {<br>delete ‘build/libs/mylibrary.jar’ //删除已经存在的jar包<br>from(‘build/intermediates/bundles/release/‘)//从该目录下加载要打包的文件<br>into(‘build/libs/‘)//jar包的保存目录<br>include(‘classes.jar’)//设置过滤，只打包classes文件<br>rename(‘classes.jar’, ‘mylibrary.jar’)//重命名，mylibrary.jar 根据自己的需求设置<br>}<br>makeJar.dependsOn(build)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 在android studio的终端运行</span><br></pre></td></tr></table></figure></p>
+<p>  gradlew makeJar<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 编译c、c++ android可执行文件</span><br></pre></td></tr></table></figure></p>
+<p>/Users/30san/Desktop/ndk_toolchain/ndk_toolchain_r15_arm64/bin/aarch64-linux-android-clang -pie -fPIE  /Users/30san/Desktop/ctest/app/src/main/jni/test.c -o  test<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">在android运行可执行文件</span><br></pre></td></tr></table></figure></p>
+<p>adb shell<br>cd 到 sdcard，然后找到可执行文件的  将文件cp 到/data/local/tmp<br>给可执行文件权限<br>chmod 777 test.o<br>运行<br>./test.o</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>/Users/30san/Desktop/ndk_toolchain/ndk_toolchain_r15_arm64/bin/aarch64-linux-android-clang -Wl,-rpath=/Users/30san/Desktop/middleware/main/lib/linux/ -L/Users/30san/Desktop/middleware/main/lib/linux/ -lSKFApi  -pie -fPIE  /Users/30san/Desktop/middleware/main/testCpp/src/ctest.c -o  test<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 查看so库依赖库</span><br></pre></td></tr></table></figure></p>
+<p>/Users/30san/Desktop/ndk_toolchain/android-ndk-r13b/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/aarch64-linux-android-readelf -d<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 加载libs的so库</span><br></pre></td></tr></table></figure></p>
+<p>sourceSets {<br>        main {<br>            jniLibs.srcDirs = [‘libs’]<br>        }<br>    }<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">## 软模块编译</span><br><span class="line">- 编译脚本</span><br></pre></td></tr></table></figure></p>
+<p>#!/bin/bash</p>
+<p>android_abi=arm64-v8a</p>
+<p>build_type=Release<br>build_dir=build_${android_abi}</p>
+<p>toolchain=/Users/30san/Desktop/ndk_toolchain/android-ndk-r15c/build/cmake/android.toolchain.cmake<br>android_ndk=/Users/30san/Desktop/ndk_toolchain/android-ndk-r15c/<br>build_type=Release<br>gernerator=”Ninja”</p>
+<h1 id="rem-Android-可选的各平台架构包括（本机安装模拟器用的是x86架构）"><a href="#rem-Android-可选的各平台架构包括（本机安装模拟器用的是x86架构）" class="headerlink" title="rem Android 可选的各平台架构包括（本机安装模拟器用的是x86架构）"></a>rem Android 可选的各平台架构包括（本机安装模拟器用的是x86架构）</h1><h1 id="rem-armeabi-v7a"><a href="#rem-armeabi-v7a" class="headerlink" title="rem armeabi-v7a"></a>rem armeabi-v7a</h1><h1 id="rem-arm64"><a href="#rem-arm64" class="headerlink" title="rem arm64"></a>rem arm64</h1><h1 id="rem-arm64-v8a"><a href="#rem-arm64-v8a" class="headerlink" title="rem arm64-v8a"></a>rem arm64-v8a</h1><h1 id="rem-x86"><a href="#rem-x86" class="headerlink" title="rem x86"></a>rem x86</h1><h1 id="rem-x86-64"><a href="#rem-x86-64" class="headerlink" title="rem x86_64"></a>rem x86_64</h1><h1 id="rem-mips"><a href="#rem-mips" class="headerlink" title="rem mips"></a>rem mips</h1><h1 id="rem-mips64"><a href="#rem-mips64" class="headerlink" title="rem mips64"></a>rem mips64</h1><p>android_api=android-21</p>
+<p>#remove the old project<br>if [ -e ${build_dir} ]<br>then<br>    rm -rfv ${build_dir}<br>fi</p>
+<p>#create build dir<br>    mkdir ${build_dir}<br>    cd ${build_dir}<br>    cmake -DCMAKE_BUILD_TYPE=${build_type} ../../  -DCMAKE_TOOLCHAIN_FILE=${toolchain} -DANDROID_NDK=${android_ndk} -DCMAKE_BUILD_TYPE=${build_type} -DANDROID_ABI=${android_abi} -DCMAKE_GENERATOR=${gernerator} -DANDROID_PLATFORM=${android_api}<br>    ninja<br>    ninja install</p>
+<p>#返回上一级目录<br>    cd ..<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">在软模块中间件新建```build_android```目录，然后运行该脚本，注意：ndk独立工具链在这里是写死路径的,可以更换，根目录添加make常量</span><br></pre></td></tr></table></figure></p>
+<p>SO_VER=1.0.1<br>SO_NAME_VER=1.0</p>
+<p>CPPFLAGS=<br>LIBS=</p>
+<h1 id="r13-arm64"><a href="#r13-arm64" class="headerlink" title="#r13 arm64"></a>#r13 arm64</h1><h1 id="BASE-PATH-Users-30san-Downloads-ndk-toolchain-r13-arm64-bin"><a href="#BASE-PATH-Users-30san-Downloads-ndk-toolchain-r13-arm64-bin" class="headerlink" title="BASE_PATH = /Users/30san/Downloads/ndk_toolchain_r13_arm64/bin/"></a>BASE_PATH = /Users/30san/Downloads/ndk_toolchain_r13_arm64/bin/</h1><p>#r15 arm32</p>
+<h1 id="BASE-PATH-Users-30san-Desktop-ndk-toolchain-ndk-toolchain-r15-arm32-bin"><a href="#BASE-PATH-Users-30san-Desktop-ndk-toolchain-ndk-toolchain-r15-arm32-bin" class="headerlink" title="BASE_PATH = /Users/30san/Desktop/ndk_toolchain/ndk_toolchain_r15_arm32/bin"></a>BASE_PATH = /Users/30san/Desktop/ndk_toolchain/ndk_toolchain_r15_arm32/bin</h1><p>BASE_PATH = /Users/30san/Desktop/ndk_toolchain/ndk_toolchain_r15_arm64/bin</p>
+<h1 id="ndk-r10-arm64-1"><a href="#ndk-r10-arm64-1" class="headerlink" title="ndk r10 arm64"></a>ndk r10 arm64</h1><h1 id="BASE-PATH-Users-30san-Downloads-ndk-toolc-ndk-toolchain-r10-arm64-bin-1"><a href="#BASE-PATH-Users-30san-Downloads-ndk-toolc-ndk-toolchain-r10-arm64-bin-1" class="headerlink" title="BASE_PATH = /Users/30san/Downloads/ndk_toolc/ndk_toolchain_r10_arm64/bin/"></a>BASE_PATH = /Users/30san/Downloads/ndk_toolc/ndk_toolchain_r10_arm64/bin/</h1><p>#ndk r20 arm64</p>
+<h1 id="BASE-PATH-Users-30san-Downloads-ndk-toolchain-arm64-bin-1"><a href="#BASE-PATH-Users-30san-Downloads-ndk-toolchain-arm64-bin-1" class="headerlink" title="BASE_PATH = /Users/30san/Downloads/ndk_toolchain_arm64/bin/"></a>BASE_PATH = /Users/30san/Downloads/ndk_toolchain_arm64/bin/</h1><p>#r13 arm64</p>
+<h1 id="ARCH-FLAGS-–no-undefined"><a href="#ARCH-FLAGS-–no-undefined" class="headerlink" title="ARCH_FLAGS = –no-undefined"></a>ARCH_FLAGS = –no-undefined</h1><h1 id="ARCH-LINK"><a href="#ARCH-LINK" class="headerlink" title="ARCH_LINK ="></a>ARCH_LINK =</h1><p>#r13 arm32<br>ARCH_FLAGS = -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16<br>ARCH_LINK = -march=armv7-a -Wl,–fix-cortex-a8</p>
+<p>#r13 arm64</p>
+<h1 id="ANDROID-CC-BASE-PATH-aarch64-linux-android-gcc"><a href="#ANDROID-CC-BASE-PATH-aarch64-linux-android-gcc" class="headerlink" title="ANDROID_CC = $(BASE_PATH)/aarch64-linux-android-gcc"></a>ANDROID_CC = $(BASE_PATH)/aarch64-linux-android-gcc</h1><h1 id="ANDROID-CXX-BASE-PATH-aarch64-linux-android-g"><a href="#ANDROID-CXX-BASE-PATH-aarch64-linux-android-g" class="headerlink" title="ANDROID_CXX = $(BASE_PATH)/aarch64-linux-android-g++"></a>ANDROID_CXX = $(BASE_PATH)/aarch64-linux-android-g++</h1><p>#r13 arm32<br>ANDROID_CC = $(BASE_PATH)/aarch64-linux-android-clang<br>ANDROID_CXX = $(BASE_PATH)/aarch64-linux-android-clang++</p>
+<p>CFLAGS += -fpic -ffunction-sections -funwind-tables -fstack-protector -fno-strict-aliasing<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">src下每一级的makefile文件修改编译器</span><br><span class="line"></span><br><span class="line">## 生成公私钥以及签名证书</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>生成私钥</li>
+</ul>
+<p>openssl ecparam -genkey -name SM2 -out sm2privkey.pem</p>
+<ul>
+<li>生成公钥 </li>
+</ul>
+<p>openssl ec -in sm2privkey.pem -pubout -out sm2pubkey</p>
+<ul>
+<li>证书请求</li>
+</ul>
+<p>openssl req -new -key sm2privkey.pem -out certreq.csr</p>
+<ul>
+<li>生成证书</li>
+</ul>
+<p>openssl req -x509 -key sm2privkey.pem -in certreq.csr -out CASm2.cer -days 3650<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## c 打印android日志</span><br></pre></td></tr></table></figure></p>
+<p>#include &lt;android/log.h&gt;</p>
+<p>__android_log_print(ANDROID_LOG_INFO, “jni”,”creat_app temp = %s \n “,temp);</p>
+<p>//查看打印的日志在终端执行<br>adb logcat  -s jni //jni指的是上边打印的tag<br><code>`</code></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/11/14/Git指定用户进行Clone/" class="archive-article-date">
-  	<time datetime="2018-11-14T10:12:39.416Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/14/Git指定用户进行Clone/">Git指定用户进行Clone</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">环境</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">android</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/11/06/mac使用homebrew安装指定版本node /" class="archive-article-date">
-  	<time datetime="2018-11-06T03:21:37.593Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-06</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/09/27/MacOS 的 zsh 和 bash切换/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MacOS 的 zsh 和 bash切换</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/06/mac使用homebrew安装指定版本node /">mac使用homebrew安装指定版本的node</a>
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">环境</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
+  
+    <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script type="text/javascript">
+if(true){
+	var gitalk = new Gitalk({
+  	clientID: 'b9959dc62407851b3b35',
+  	clientSecret: 'd3e63aac9bfeb83073480217f69fe062d20da424',
+  	repo: 'ibambooooo.github.io',
+  	owner: 'ibambooooo',
+  	admin: ['ibambooooo'],
+  	 id: 'Thu Oct 31 2019 14:06:43 GMT+0800', //页面的唯一标识。长度必须小于50
+    //id: window.location.pathname,
+     //类似Facebook评论框的全屏遮罩效果.
+  	distractionFreeMode: false
+})
+gitalk.render('gitalk-container') 
+}
+</script>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/13/nvm管理node/" class="archive-article-date">
-  	<time datetime="2018-08-13T13:52:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/13/nvm管理node/">nvm使用 nvm 管理不同版本的 node 与 npm</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">环境</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/02/reactjs错误处理/" class="archive-article-date">
-  	<time datetime="2018-08-01T17:03:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/02/reactjs错误处理/">reactjs错误处理</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">环境</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/02/hexo_yilia_gitalk搭建github_page博客/" class="archive-article-date">
-  	<time datetime="2018-08-01T16:50:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/02/hexo_yilia_gitalk搭建github_page博客/">hexo + yilia +gitalk 搭建github.io博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">环境</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/02/RN相关环境配置/" class="archive-article-date">
-  	<time datetime="2018-08-01T16:41:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/02/RN相关环境配置/">RN相关环境配置</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">环境</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/tags/环境/">&laquo; Prev</a><a class="page-number" href="/tags/环境/">1</a><span class="page-number current">2</span>
-    </nav>
-  
-
-
           </div>
         </div>
       </div>
@@ -415,9 +377,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
